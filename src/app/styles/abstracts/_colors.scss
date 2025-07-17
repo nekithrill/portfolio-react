@@ -1,0 +1,37 @@
+:root {
+	.light-theme {
+		--clr-primary: #00674f;
+		--clr-secondary: #f0f0f0;
+		--clr-accent: #eedb34;
+		--clr-accent-dark: #2a435c;
+		--clr-background: #c5e4c4;
+
+		--lang-switcher-bg: var(--clr-secondary);
+		--lang-switcher-text: var(--clr-primary);
+		--lang-switcher-bg-active: var(--clr-accent);
+		--lang-switcher-text-active: var(--clr-accent-dark);
+
+		--theme-switcher-bg: var(--clr-secondary);
+		--theme-switcher-element: var(--clr-accent);
+
+		--tile-active-bg: var(--clr-primary);
+	}
+
+	.dark-theme {
+		--clr-primary: #00674f;
+		--clr-secondary: #f0f0f0;
+		--clr-accent: #eedb34;
+		--clr-accent-dark: #2a435c;
+		--clr-background: #2e3631;
+
+		--lang-switcher-bg: var(--clr-secondary);
+		--lang-switcher-text: var(--clr-primary);
+		--lang-switcher-bg-active: var(--clr-accent);
+		--lang-switcher-text-active: var(--clr-accent-dark);
+
+		--theme-switcher-bg: var(--clr-secondary);
+		--theme-switcher-element: var(--clr-accent-dark);
+
+		--tile-active-bg: var(--clr-primary);
+	}
+}

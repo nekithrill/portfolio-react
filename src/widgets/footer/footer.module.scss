@@ -1,0 +1,39 @@
+.footer {
+	--width: 60%;
+	--height: 4rem;
+	--items-gap: 1rem;
+
+	width: var(--width);
+	height: var(--height);
+	border-radius: 1rem 1rem 0 0;
+
+	font-family: var(--ff-primary);
+	background-color: var(--clr-primary);
+
+	&__content {
+		height: 100%;
+		width: 100%;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&__links {
+		display: flex;
+		gap: var(--items-gap);
+
+		font-weight: var(--fw-medium);
+
+		a {
+			color: var(--clr-accent);
+			transition: all 0.4s ease-in-out;
+			outline: none;
+
+			&:hover,
+			&:focus {
+				color: var(--clr-secondary);
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"name": "portfolio-app",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@react-three/drei": "^9.121.2",
+		"@reduxjs/toolkit": "^2.5.0",
+		"i18next": "^23.12.2",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-i18next": "^15.0.0",
+		"react-redux": "^9.2.0",
+		"react-router-dom": "^6.25.1",
+		"react-three-fiber": "^6.0.13",
+		"styled-components": "^6.1.12",
+		"sass": "^1.83.4",
+		"three": "^0.166.1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.5",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@types/sass": "^1.45.0",
+		"@types/three": "^0.166.0",
+		"@typescript-eslint/eslint-plugin": "^7.15.0",
+		"@typescript-eslint/parser": "^7.15.0",
+		"@vitejs/plugin-react": "^4.3.1",
+		"eslint": "^8.57.0",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-react-refresh": "^0.4.7",
+		"typescript": "^5.2.2",
+		"vite": "^6.0.7"
+	}
+}

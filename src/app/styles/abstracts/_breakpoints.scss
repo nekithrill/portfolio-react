@@ -1,0 +1,33 @@
+// NOTE: Media queries mixin.
+// ? The third parameter $max-width (default false) switches between 'min-width' and 'max-width'.
+// ? Use min-width for mobile-first approach, max-width for desktop-first.
+// USAGE:
+// @include breakpoint('md') { ... }
+// @include breakpoint('custom', 500px) { ... }
+// @include breakpoint('lg', null, true) { ... }
+
+$breakpoints: (
+	'xxs': 0,
+	'xs': 360px,
+	'sm': 480px,
+	'md': 768px,
+	'lg': 1024px,
+	'xl': 1280px,
+	'xxl': 1600px
+);
+
+@mixin breakpoint($size, $custom-size: null, $max-width: false) {
+	$width: if($custom-size, $custom-size, map-get($breakpoints, $size));
+
+	@if $width == null {
+		@warn "Breakpoint `#{$size}` not found in list $breakpoints, and custom value not passed.";
+	} @else if $max-width {
+		@media (max-width: $width) {
+			@content;
+		}
+	} @else {
+		@media (min-width: $width) {
+			@content;
+		}
+	}
+}

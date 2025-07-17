@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+// colorful outline while focusing on element
+*:focus-visible {
+	outline: 0.2rem solid var(--clr-accent);
+	outline-offset: 0.1rem;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--ff-primary);
+	font-size: var(--default-size);
+	color: var(--clr-text);
+
+	background-image: var(--bg-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--fw-medium);
+	color: var(--clr-app-text);
+}
+
+h1 {
+	font-size: var(--fs-h1);
+}
+
+h2 {
+	font-size: var(--fs-h2);
+}
+
+h3 {
+	font-size: var(--fs-h3);
+}
+
+h4 {
+	font-size: var(--fs-h4);
+}
+
+h5 {
+	font-size: var(--fs-h5);
+}
+
+h6 {
+	font-size: var(--fs-h6);
+}
+
+p {
+	font-size: var(--fs-text);
+	font-weight: var(--fw-regular);
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-app-text);
+}
+
+.app {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+
+	background-color: var(--clr-background);
+	color: var(--clr-secondary);
+
+	z-index: 1;
+}
