@@ -1,4 +1,4 @@
-export const CloseIcon = ({ color }: { color: any }) => {
+export const AboutIcon = ({ color }: { color: any }) => {
 	return (
 		// TODO: Переработать иконку
 		<div className='icon'>
