@@ -1,39 +1,29 @@
 {
-	"tiles": {
+	"tile": {
 		"about": {
 			"title": "Про мене",
-			"content": {
-				"heading": "Заголовок",
-				"text": "Текст"
-			}
+			"heading": "Заголовок",
+			"text": "Текст"
 		},
 		"skills": {
 			"title": "Навички",
-			"content": {
-				"heading": "Заголовок",
-				"text": "Текст"
-			}
+			"heading": "Заголовок",
+			"text": "Текст"
 		},
 		"education": {
 			"title": "Освіта",
-			"content": {
-				"heading": "Заголовок",
-				"text": "Текст"
-			}
+			"heading": "Заголовок",
+			"text": "Текст"
 		},
 		"projects": {
 			"title": "Проєкти",
-			"content": {
-				"heading": "Заголовок",
-				"text": "Текст"
-			}
+			"heading": "Заголовок",
+			"text": "Текст"
 		},
 		"contacts": {
 			"title": "Контакти",
-			"content": {
-				"heading": "Заголовок",
-				"text": "Текст"
-			}
+			"heading": "Заголовок",
+			"text": "Текст"
 		}
 	}
 }
