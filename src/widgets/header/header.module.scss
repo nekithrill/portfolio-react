@@ -1,47 +1,47 @@
 .header {
 	--width: 60%;
 	--height: 6rem;
-	--items-gap: 1.5rem;
+	--items-gap: 1rem;
 
 	width: var(--width);
+	min-width: 35rem;
 	height: var(--height);
 	border-radius: 0 0 1rem 1rem;
 
 	display: flex;
 	align-items: center;
-	gap: var(--items-gap);
 
 	background-color: var(--clr-primary);
 	user-select: none;
 
 	&__logo {
-		flex: 1;
+		flex: 1 1 33%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		.logo {
-			width: 4rem;
-			height: auto;
-			display: block;
-			object-fit: contain;
-
-			cursor: pointer;
-		}
 	}
 
 	&__clock {
-		flex: 1;
+		flex: 1 1 33%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
 	&__settings {
-		flex: 1;
+		flex: 1 1 33%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: var(--items-gap);
 	}
+}
+
+.logo {
+	width: 4rem;
+	height: auto;
+	display: block;
+	object-fit: contain;
+
+	cursor: pointer;
 }
