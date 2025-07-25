@@ -4,6 +4,7 @@
 	--items-gap: 1rem;
 
 	width: var(--width);
+	min-width: 35rem;
 	height: var(--height);
 	border-radius: 1rem 1rem 0 0;
 
@@ -17,6 +18,10 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+
+		span {
+			font-weight: var(--fw-bold);
+		}
 	}
 
 	&__links {
