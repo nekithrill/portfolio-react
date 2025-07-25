@@ -1,4 +1,4 @@
-# **👨🏻‍💼 Portfolio app**
+# **Portfolio app**
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=000000)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=ffffff)](https://www.typescriptlang.org/)
@@ -14,7 +14,15 @@ The portfolio is implemented as an SPA using React and Vite. The application is 
 
 ## **🗂️ Project structure**
 
-The project was implemented using an adapted **FSD architecture**: the key principles of layering (features, entities, shared, pages, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences.
+The project was implemented using an adapted **FSD architecture**: the key principles of layering (features, entities, shared, pages, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
+
+📁 `app`: entry point, configs, providers, global styles.
+
+📁 `widgets`: blocks that builds from features/shared and used at app level.
+
+📁 `features`: modules with business logic.
+
+📁 `shared`: reusable components (ui, layouts, icons).
 
 <pre lang="md">📦 root
 ├── 📁 src  
@@ -25,13 +33,7 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 │    │    │         │     ├── 📄 en.json
 │    │    │         │     ├── 📄 ua.json
 │    │    │         │     └── 📄 ru.json
-│    │    │         └── 📄 i18n.ts
-│    │    ├── 📁 providers
-│    │    │    ├── 📄 
-│    │    │    ├── 📄 
-│    │    │    └── 📄 
-│    │    ├── 📁 store
-│    │    │    └── 📄 store.ts		 
+│    │    │         └── 📄 i18n.ts 
 │    │    ├── 📁 styles
 │    │    │    ├── 📁 abstracts
 │    │    │    │    ├── 📄 _animations.scss
@@ -83,14 +85,15 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 │    └── 📁 widgets
 │         ├── 📁 header
 │         │    ├── 📄 Header.module.scss
-│         │    ├── 📄 Header.tsx
-│         │    └── 📄 Logo.tsx
+│         │    └── 📄 Header.tsx
 │         ├── 📁 footer
 │         │    ├── 📄 Footer.module.scss
 │         │    └── 📄 Footer.tsx
 │         └── 📁 content-tile
-│              ├── 📄 
-│              └── 📄 
+│              ├── 📄 Tile.module.scss
+│              ├── 📄 Tile.tsx
+│              ├── 📄 Tile.types.ts
+│              └── 📄 TileData.tsx
 │
 ├── 📄 index.html
 ├── ⚙️ .gitignore
