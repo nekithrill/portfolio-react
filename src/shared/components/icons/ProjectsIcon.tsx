@@ -1,18 +1,14 @@
-export const ProjectsIcon = ({ color }: { color: any }) => {
-	return (
-		// TODO: Переработать иконку
-		<div className='icon'>
-			<svg
-				width='32px'
-				height='32px'
-				viewBox='0 0 1024 1024'
-				xmlns='http://www.w3.org/2000/svg'
-			>
-				<path
-					fill={color}
-					d='M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z'
-				/>
-			</svg>
-		</div>
-	)
-}
+import { IconProps } from './icon-wrapper/IconWrapper.types'
+
+export const ProjectsIcon = ({ svgClassName }: IconProps) => (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		viewBox='0 0 24 24'
+		width='100%'
+		height='100%'
+		fill='currentColor'
+		className={`${svgClassName}`}
+	>
+		<path d='M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z' />
+	</svg>
+)

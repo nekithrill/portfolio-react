@@ -1,18 +1,20 @@
-export const ContactsIcon = ({ color }: { color: any }) => {
-	return (
-		// TODO: Переработать иконку
-		<div className='icon'>
-			<svg
-				width='32px'
-				height='32px'
-				viewBox='0 0 1024 1024'
-				xmlns='http://www.w3.org/2000/svg'
-			>
-				<path
-					fill={color}
-					d='M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z'
-				/>
-			</svg>
-		</div>
-	)
-}
+import { IconProps } from './icon-wrapper/IconWrapper.types'
+
+export const ContactsIcon = ({ svgClassName }: IconProps) => (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		viewBox='0 0 24 24'
+		width='100%'
+		height='100%'
+		fill='none'
+		className={`${svgClassName}`}
+	>
+		<path
+			stroke='currentColor'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			strokeWidth='2'
+			d='m4 18 5-6m11 6-5-6M3 8l7.225 4.817c.642.427.962.641 1.309.724.306.074.626.074.932 0 .347-.083.668-.297 1.309-.724L21 8M6.2 19h11.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C21 17.48 21 16.92 21 15.8V8.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C19.48 5 18.92 5 17.8 5H6.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C3 6.52 3 7.08 3 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C4.52 19 5.08 19 6.2 19Z'
+		/>
+	</svg>
+)
