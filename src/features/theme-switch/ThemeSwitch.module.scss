@@ -1,75 +1,67 @@
-.theme-switcher {
-	--width: 3.5rem;
-	--height: 2rem;
+.theme-switch {
+	--width: 4rem;
+	--height: 2.2rem;
 
 	width: var(--width);
 	height: var(--height);
 	position: relative;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	input[type='checkbox'] {
+		display: none;
+
+		&:checked + label {
+			&::before {
+				transform: translateX(1.8rem);
+			}
+		}
+
+		&:focus + label {
+			box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.2);
+		}
+	}
 
 	label {
 		width: var(--width);
 		height: var(--height);
+		position: absolute;
+		border-radius: 2rem;
 
-		input {
-			width: 0;
-			height: 0;
-			opacity: 0;
+		background-color: var(--clr-switch-bg);
+		cursor: pointer;
 
-			&:checked + .slider {
-				background-color: var(--theme-switcher-bg);
-			}
+		.icons {
+			width: var(--width);
+			height: var(--height);
 
-			&:checked + .slider::before {
-				transform: translateX(1.5rem);
-			}
-			&:checked + .slider::after {
-				width: 1.2rem;
-				height: 1.2rem;
-			}
-
-			&:focus + .slider {
-				box-shadow: 0 0 0.0625rem var(--theme-switcher-bg);
-			}
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
 		}
 
-		.slider {
+		&::before {
+			content: '';
+			--slider-width: 1.9rem;
+
+			width: var(--slider-width);
+			height: var(--slider-width);
 			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			border-radius: 1rem;
-			background-color: var(--theme-switcher-bg);
-			transition: 0.4s;
-			cursor: pointer;
-
-			&::before {
-				content: '';
-				height: 1.4rem;
-				width: 1.4rem;
-				position: absolute;
-				left: 0.3rem;
-				bottom: 0.3rem;
-				border-radius: 1.25rem;
-				background-color: var(--theme-switcher-element);
-				transition: 0.4s;
-			}
-
-			&::after {
-				content: '';
-				width: 0;
-				height: 0;
-				position: absolute;
-				left: 42%;
-				top: 5%;
-				border-radius: 50%;
-				background-color: var(--theme-switcher-bg);
-				transition: ease 0.4s;
-			}
+			top: 7.5%;
+			left: 3.5%;
+			border-radius: 50%;
+			background-color: var(--clr-switch-switcher);
+			transition: transform 0.3s ease;
 		}
 	}
+}
+
+.active {
+	color: var(--clr-switch-icon-active);
+}
+
+.sun {
+	margin-left: 0.1rem;
+}
+
+.moon {
+	margin-right: 0.2rem;
 }
