@@ -1,0 +1,12 @@
+.icon-wrapper {
+	width: 1.5rem;
+	height: 1.5rem;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	pointer-events: none;
+	z-index: 5;
+}
