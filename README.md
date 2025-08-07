@@ -2,19 +2,75 @@
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=000000)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=ffffff)](https://www.typescriptlang.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=ffffff)](https://threejs.org/)
 [![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=ffffff)](https://sass-lang.com/)
-[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=ffffff)](https://eslint.org/)
-[![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=000000)](https://prettier.io/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=ffffff)](https://vitejs.dev/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=ffffff)](https://eslint.org/)
+[![Stylelint](https://img.shields.io/badge/Stylelint-2e2e2e?style=for-the-badge&logo=stylelint)](https://stylelint.io/)
+[![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=000000)](https://prettier.io/)
 
-The portfolio is implemented as an SPA using React and Vite. The application is written in TypeScript, styled using SCSS modules, includes animations and interactive components. The project uses ESLint and Prettier to keep the code clean. Three.js elements and adaptive layout are also integrated.
+Portfolio is implemented as SPA using React and Vite. The application is written in TypeScript, styled using SCSS modules, includes animations and interactive components. The project uses ESLint, Stylelint and Prettier to keep the code clean.
 
-## **🧩 Used dependencies**
+## **🧩 Dependencies and scripts**
+
+<details>
+<summary><strong>📚 Dependencies</strong></summary>
+
+<br>
+
+| Package(s)                              | Purpose                     |
+| --------------------------------------- | --------------------------- |
+| **React**, **ReactDOM**                 | UI                          |
+| **i18next**, **react-i18next**          | Localization                |
+| **Sass**                                | Styling                     |
+| **TypeScript**, **Vite**                | Type-safe frontend tooling  |
+| **ESLint**, **Prettier**, **Stylelint** | Code quality and formatting |
+
+<br>
+
+</details>
+
+<details>
+<summary><strong>📜 Scripts</strong></summary>
+
+<br>
+
+| Script           | Command                            | Purpose                                                |
+| ---------------- | ---------------------------------- | ------------------------------------------------------ |
+| `dev`            | `vite`                             | Runs project in development mode.                      |
+| `build`          | `tsc -b && vite build`             | Builds **TypeScript** + bundle project using **Vite**. |
+| `preview`        | `vite preview`                     | Local preview of production build.                     |
+| `lint`           | `eslint . --ext .ts,.tsx,.js,.jsx` | Checks JS/TS files with **ESLint**.                    |
+| `lint:fix`       | `npm run lint -- --fix`            | Autofix of **ESLint** errors.                          |
+| `lint:style`     | `stylelint "src/**/*.{css,scss}"`  | Checks CSS/SCSS files with **Stylelint**.              |
+| `lint:style:fix` | `npm run lint:style -- --fix`      | Autofix of **Stylelint** errors.                       |
+| `format:check`   | `prettier --check .`               | Checks formatting with **Prettier**.                   |
+| `format`         | `prettier --write .`               | Formats files according to **Prettier** rules.         |
+| `typecheck`      | `tsc --build`                      | Types check with **TypeScript**.                       |
+
+<br>
+
+</details>
+
+## **🌐 Supported devices and browsers**
+
+<!-- | Browser           | Support | Version |
+| ----------------- | ------- | ------- |
+| Chrome            | ✅      | 00+     |
+| Firefox           | ✅      | 00+     |
+| Safari            | ✅      | 00+     |
+| Edge (Chromium)   | ✅      | 00+     |
+| Opera             | ✅      | 00+     |
+| Internet Explorer | ❌      | —       |
+
+| Device           | Support | OS / sizes                          |
+| ---------------- | ------- | ----------------------------------- |
+| 💻 PCs (Desktop) | ✅      | Windows, macOS, Linux<br>sizes      |
+| 📱 Phones        | ✅      | Modern iOS/Android devices<br>sizes |
+| 📟 Tablets       | ✅      | iPad, Android Tablets<br>sizes      | -->
 
 ## **🗂️ Project structure**
 
-The project was implemented using an adapted **FSD architecture**: the key principles of layering (features, entities, shared, pages, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
+The project was implemented using an adapted **FSD architecture**: the key principles of layering (app, features, shared, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
 
 📁 `app`: entry point, configs, providers, global styles.
 
@@ -28,72 +84,25 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 ├── 📁 src  
 │    ├── 📁 app
 │    │    ├── 📁 config
-│    │    │    └── 📁 i18n
-│    │    │         ├── 📁 locales
-│    │    │         │     ├── 📄 en.json
-│    │    │         │     ├── 📄 ua.json
-│    │    │         │     └── 📄 ru.json
-│    │    │         └── 📄 i18n.ts 
 │    │    ├── 📁 styles
-│    │    │    ├── 📁 abstracts
-│    │    │    │    ├── 📄 _animations.scss
-│    │    │    │    ├── 📄 _breakpoints.scss
-│    │    │    │    ├── 📄 _colors.scss
-│    │    │    │    ├── 📄 _typography.scss
-│    │    │    │    └── 📄 _index.scss
-│    │    │    ├── 📁 base
-│    │    │    │    ├── 📄 _base.scss
-│    │    │    │    ├── 📄 _reset.scss
-│    │    │    │    └── 📄 _index.scss
-│    │    │    ├── 📁 utilities
-│    │    │    │    ├── 📄 _reset.scss
-│    │    │    │    └── 📄 _index.scss
-│    │    │    └── 📄 globals.scss
 │    │    ├── 📄 App.tsx
 │    │    └── 📄 main.tsx
 │    │
 │    ├── 📁 features
 │    │    ├── 📁 contact-form
-│    │    │    ├── 📄 ContactForm.module.scss
-│    │    │    └── 📄 ContactForm.tsx
 │    │    ├── 📁 clock
-│    │    │    ├── 📄 Clock.module.scss
-│    │    │    ├── 📄 Clock.tsx
-│    │    │    └── 📄 useClock.ts
 │    │    ├── 📁 language-switch
-│    │    │    ├── 📄 LanguageSwitch.module.scss
-│    │    │    ├── 📄 LanguageSwitch.tsx
-│    │    │    └── 📄 useLanguageSwitch.ts
 │    │    └── 📁 theme-switch
-│    │         ├── 📄 ThemeSwitch.module.scss
-│    │         ├── 📄 ThemeSwitch.tsx
-│    │         └── 📄 useThemeSwitch.ts
 │    │
 │    ├── 📁 shared
 │    │    ├── 📁 assets
-│    │    │    ├── 📁 fonts
-│    │    │    ├── 📁 images
-│    │    │    └── 📄 logo.svg
 │    │    ├── 📁 components
-│    │    │    ├── 📁 icons
-│    │    │    ├── 📁 layout
-│    │    │    └── 📁 ui
 │    │    └── 📁 hooks
-│    │         ├── 📄 useSomething.ts
-│    │         └── 📄 useSomething.ts
 │    │    
 │    └── 📁 widgets
 │         ├── 📁 header
-│         │    ├── 📄 Header.module.scss
-│         │    └── 📄 Header.tsx
 │         ├── 📁 footer
-│         │    ├── 📄 Footer.module.scss
-│         │    └── 📄 Footer.tsx
 │         └── 📁 content-tile
-│              ├── 📄 Tile.module.scss
-│              ├── 📄 Tile.tsx
-│              ├── 📄 Tile.types.ts
-│              └── 📄 TileData.tsx
 │
 ├── 📄 index.html
 ├── ⚙️ .gitignore
@@ -101,6 +110,7 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 ├── ⚙️ .eslintrc.cjs
 ├── ⚙️ .prettierignore
 ├── ⚙️ .prettierrc
+├── ⚙️ .stylelintrc.cjs
 ├── ⚙️ tsconfig.json
 ├── ⚙️ tsconfig.app.json
 ├── ⚙️ tsconfig.node.json
