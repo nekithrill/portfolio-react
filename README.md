@@ -63,7 +63,7 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 | 🌐   | IE      | ❌      | 00+     | —                     | —           |
 | 💻   | Desktop | ❌      | —       | Windows, macOS, Linux | ≥1024px     |
 | 📟   | Tablet  | ❌      | —       | iPadOS, Android       | ≥768px      |
-| 📱   | Phone   | ❌      | —       | iOS, Android          | ≥320px      |
+| 📱   | Phone   | ❌      | —       | iOS, Android          | ≥360px      |
 
 <br>
 
