@@ -54,16 +54,16 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 ## **🧰 Supported devices and browsers**
 
 | Type | Name    | Support | Version | OS                    | Screen Size |
-| ---- | ------- | ------- | ------- | --------------------- | ----------- |
-| 🌐   | Chrome  | ❌      | 00+     | —                     | —           |
-| 🌐   | Firefox | ❌      | 00+     | —                     | —           |
-| 🌐   | Safari  | ❌      | 00+     | —                     | —           |
-| 🌐   | Edge    | ❌      | 00+     | —                     | —           |
-| 🌐   | Opera   | ❌      | 00+     | —                     | —           |
-| 🌐   | IE      | ❌      | 00+     | —                     | —           |
-| 💻   | Desktop | ❌      | —       | Windows, macOS, Linux | ≥1024px     |
-| 📟   | Tablet  | ❌      | —       | iPadOS, Android       | ≥768px      |
-| 📱   | Phone   | ❌      | —       | iOS, Android          | ≥360px      |
+| ---- | ------- | :-----: | ------- | --------------------- | ----------- |
+| 🌐   | Chrome  |   ❌    | 00+     | —                     | —           |
+| 🌐   | Firefox |   ❌    | 00+     | —                     | —           |
+| 🌐   | Safari  |   ❌    | 00+     | —                     | —           |
+| 🌐   | Edge    |   ❌    | 00+     | —                     | —           |
+| 🌐   | Opera   |   ❌    | 00+     | —                     | —           |
+| 🌐   | IE      |   ❌    | 00+     | —                     | —           |
+| 💻   | Desktop |   ❌    | —       | Windows, macOS, Linux | ≥1024px     |
+| 📟   | Tablet  |   ❌    | —       | iPadOS, Android       | ≥768px      |
+| 📱   | Phone   |   ❌    | —       | iOS, Android          | ≥360px      |
 
 <br>
 
