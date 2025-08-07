@@ -4,30 +4,25 @@ import type { UseClockResult } from './Clock.types'
 import { DATE_TIME_OPTIONS, UPDATE_INTERVAL } from './Clock.types'
 
 export default function useClock(): UseClockResult {
-	const [time, setTime] = useState('')
-	const [date, setDate] = useState('')
+	const [now, setNow] = useState(new Date())
 	const { i18n } = useTranslation()
 
 	useEffect(() => {
-		const updateClockAndDate = () => {
-			const nowDate = new Date()
-			setTime(
-				new Intl.DateTimeFormat(i18n.language, DATE_TIME_OPTIONS.clock).format(
-					nowDate
-				)
-			)
-			setDate(
-				new Intl.DateTimeFormat(i18n.language, DATE_TIME_OPTIONS.date).format(
-					nowDate
-				)
-			)
-		}
-
-		updateClockAndDate()
-		const intervalId = setInterval(updateClockAndDate, UPDATE_INTERVAL)
+		const intervalId = setInterval(() => {
+			setNow(new Date())
+		}, UPDATE_INTERVAL)
 
 		return () => clearInterval(intervalId)
-	}, [i18n.language])
+	}, [])
+
+	const time = new Intl.DateTimeFormat(
+		i18n.language,
+		DATE_TIME_OPTIONS.clock
+	).format(now)
+	const date = new Intl.DateTimeFormat(
+		i18n.language,
+		DATE_TIME_OPTIONS.date
+	).format(now)
 
 	return { time, date }
 }
