@@ -53,17 +53,17 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 ## **🌐 Supported devices and browsers**
 
-| Type    | Name              | Support | Version / OS / sizes             |
-| ------- | ----------------- | ------- | -------------------------------- |
-| Browser | Chrome            | ❌      | 00+                              |
-| Browser | Firefox           | ❌      | 00+                              |
-| Browser | Safari            | ❌      | 00+                              |
-| Browser | Edge (Chromium)   | ❌      | 00+                              |
-| Browser | Opera             | ❌      | 00+                              |
-| Browser | Internet Explorer | ❌      | —                                |
-| Device  | 💻 PC (Desktop)   | ❌      | Windows, macOS, Linux<br>sizes   |
-| Device  | 📱 Phone          | ❌      | Современные iOS/Android<br>sizes |
-| Device  | 📟 Tablet         | ❌      | iPad, Android планшеты<br>sizes  |
+| Type    | Name              | Support | Version / OS / sizes           |
+| ------- | ----------------- | ------- | ------------------------------ |
+| Browser | Chrome            | ❌      | 00+                            |
+| Browser | Firefox           | ❌      | 00+                            |
+| Browser | Safari            | ❌      | 00+                            |
+| Browser | Edge (Chromium)   | ❌      | 00+                            |
+| Browser | Opera             | ❌      | 00+                            |
+| Browser | Internet Explorer | ❌      | —                              |
+| Device  | 💻 PC (Desktop)   | ❌      | Windows, macOS, Linux<br>sizes |
+| Device  | 📱 Phone          | ❌      | iOS, Android<br>sizes          |
+| Device  | 📟 Tablet         | ❌      | iPad, Android<br>sizes         |
 
 <br>
 
