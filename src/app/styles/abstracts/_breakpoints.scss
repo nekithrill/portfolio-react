@@ -17,9 +17,9 @@ $breakpoints: (
 );
 
 @mixin breakpoint($size, $custom-size: null, $max-width: false) {
-	$width: if($custom-size, $custom-size, map-get($breakpoints, $size));
+	$width: if($custom-size, $custom-size, map.get($breakpoints, $size));
 
-	@if $width == null {
+	@if not $width {
 		@warn "Breakpoint `#{$size}` not found in list $breakpoints, and custom value not passed.";
 	} @else if $max-width {
 		@media (max-width: $width) {
