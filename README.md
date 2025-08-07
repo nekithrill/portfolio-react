@@ -49,8 +49,6 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 | `format`         | `prettier --write .`               | Formats files according to **Prettier** rules.         |
 | `typecheck`      | `tsc --build`                      | Types check with **TypeScript**.                       |
 
-<br>
-
 </details>
 
 <br>
