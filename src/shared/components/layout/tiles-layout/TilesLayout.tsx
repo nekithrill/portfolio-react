@@ -21,6 +21,7 @@ export function TilesLayout() {
 
 				return (
 					<Tile
+						key={id}
 						id={id}
 						{...tileProps}
 						isActive={isActive}
