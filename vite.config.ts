@@ -3,6 +3,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+	base: '/',
 	server: {
 		port: Number(process.env.VITE_PORT) || 3000,
 		host: true,
