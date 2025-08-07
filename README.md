@@ -51,7 +51,7 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 <br>
 
-## **🌐 Supported devices and browsers**
+## **🧰 Supported devices and browsers**
 
 | Type | Name    | Support | Version / OS / sizes           |
 | ---- | ------- | ------- | ------------------------------ |
