@@ -4,8 +4,10 @@
 	--items-gap: 1rem;
 
 	width: var(--width);
-	min-width: 35rem;
 	height: var(--height);
+
+	border: var(--app-border);
+	border-bottom: none;
 	border-radius: 1rem 1rem 0 0;
 
 	font-family: var(--ff-primary);
