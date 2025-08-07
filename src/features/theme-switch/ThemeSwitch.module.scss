@@ -6,20 +6,6 @@
 	height: var(--height);
 	position: relative;
 
-	input[type='checkbox'] {
-		display: none;
-
-		&:checked + label {
-			&::before {
-				transform: translateX(1.8rem);
-			}
-		}
-
-		&:focus + label {
-			box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.2);
-		}
-	}
-
 	label {
 		width: var(--width);
 		height: var(--height);
@@ -50,6 +36,20 @@
 			border-radius: 50%;
 			background-color: var(--clr-switch-switcher);
 			transition: transform 0.3s ease;
+		}
+	}
+
+	input[type='checkbox'] {
+		display: none;
+
+		&:checked + label {
+			&::before {
+				transform: translateX(1.8rem);
+			}
+		}
+
+		&:focus + label {
+			box-shadow: 0 0 0 0.1875rem rgb(0 0 0 / 20%);
 		}
 	}
 }
