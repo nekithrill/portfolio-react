@@ -78,7 +78,7 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 
 📁 `features`: modules with business logic.
 
-📁 `shared`: reusable components (ui, layouts, icons).
+📁 `shared`: reusable stuff (ui, layouts, icons, hooks, assets).
 
 <pre lang="md">📦 root
 ├── 📁 src  
@@ -117,6 +117,5 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 ├── ⚙️ vite.config.ts
 ├── ⚙️ vite-env.d.ts
 ├── ⚙️ global.d.ts
-├── ⚙️ package.json
-└── ⚙️ package-lock.json
+└── ⚙️ package.json
 </pre>
