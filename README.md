@@ -10,8 +10,6 @@
 
 Portfolio is implemented as SPA using React and Vite. The application is written in TypeScript, styled using SCSS modules, includes animations and interactive components. The project uses ESLint, Stylelint and Prettier to keep the code clean.
 
-<br>
-
 ## **🧩 Dependencies and scripts**
 
 <details>
