@@ -1,37 +1,65 @@
 :root {
 	.light-theme {
-		--clr-primary: #00674f;
-		--clr-secondary: #f0f0f0;
-		--clr-accent: #eedb34;
-		--clr-accent-dark: #2a435c;
-		--clr-background: #c5e4c4;
+		--app-border: 0.125rem solid var(--clr-text);
 
-		--lang-switcher-bg: var(--clr-secondary);
-		--lang-switcher-text: var(--clr-primary);
-		--lang-switcher-bg-active: var(--clr-accent);
-		--lang-switcher-text-active: var(--clr-accent-dark);
+		--clr-h: 40;
+		--clr-s: 5%;
+		--clr-l: 95%;
 
-		--theme-switcher-bg: var(--clr-secondary);
-		--theme-switcher-element: var(--clr-accent);
+		--clr-primary: hsl(var(--clr-h) var(--clr-s) var(--clr-l));
+		--clr-secondary: hsl(var(--clr-h) 50% 15%);
+		--clr-neutral: hsl(var(--clr-h) 10% 60%);
+		--clr-accent: hsl(var(--clr-h) 100% 40%);
+		--clr-background: var(--clr-primary);
+		--clr-text: var(--clr-secondary);
 
-		--tile-active-bg: var(--clr-primary);
+		--clr-switcher-bg: var(--clr-secondary);
+		--clr-switcher-bg-hover: var(--clr-neutral);
+		--clr-switcher-bg-active: var(--clr-primary);
+		--clr-switcher-text: var(--clr-primary);
+		--clr-switcher-text-hover: var(--clr-primary);
+		--clr-switcher-text-active: var(--clr-accent);
+		--switcher-border: var(--app-border);
+
+		--clr-clock-time: var(--clr-accent);
+		--clr-clock-date: var(--clr-text);
+		--clock-border: var(--app-border);
+
+		--clr-controller-bg: var(--clr);
+		--clr-controller-text: var(--clr-text);
+		--clr-controller-text-active: var(--clr-accent);
+		--controller-border: var(--app-border);
 	}
 
 	.dark-theme {
-		--clr-primary: #00674f;
-		--clr-secondary: #f0f0f0;
-		--clr-accent: #eedb34;
-		--clr-accent-dark: #2a435c;
-		--clr-background: #2e3631;
+		--app-border: 0.125rem solid var(--clr-text);
 
-		--lang-switcher-bg: var(--clr-secondary);
-		--lang-switcher-text: var(--clr-primary);
-		--lang-switcher-bg-active: var(--clr-accent);
-		--lang-switcher-text-active: var(--clr-accent-dark);
+		--clr-h: 40;
+		--clr-s: 5%;
+		--clr-l: 10%;
 
-		--theme-switcher-bg: var(--clr-secondary);
-		--theme-switcher-element: var(--clr-accent-dark);
+		--clr-primary: hsl(var(--clr-h) var(--clr-s) var(--clr-l));
+		--clr-secondary: hsl(var(--clr-h) 50% 90%);
+		--clr-neutral: hsl(var(--clr-h) 10% 60%);
+		--clr-accent: hsl(var(--clr-h) 100% 40%);
+		--clr-background: var(--clr-primary);
+		--clr-text: var(--clr-secondary);
 
-		--tile-active-bg: var(--clr-primary);
+		--clr-switcher-bg: var(--clr-secondary);
+		--clr-switcher-bg-hover: var(--clr-neutral);
+		--clr-switcher-bg-active: var(--clr-primary);
+		--clr-switcher-text: var(--clr-primary);
+		--clr-switcher-text-hover: var(--clr-secondary);
+		--clr-switcher-text-active: var(--clr-accent);
+		--switcher-border: var(--app-border);
+
+		--clr-clock-time: var(--clr-accent);
+		--clr-clock-date: var(--clr-text);
+		--clock-border: var(--app-border);
+
+		--clr-controller-bg: var(--clr);
+		--clr-controller-text: var(--clr-text);
+		--clr-controller-text-active: var(--clr-accent);
+		--controller-border: var(--app-border);
 	}
 }
