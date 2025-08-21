@@ -1,5 +1,22 @@
+# Node / NPM
 node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Git
+.git
+.gitignore
+
+# Code editor / IDE / OS
+.vscode
+.idea
+.DS_Store
+
+# Logs
+npm-debug.log*
+*.log
+
 dist
 build
-*.log
-*.min.js
+coverage
