@@ -7,10 +7,20 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: Tektur;
+	src: url('/src/shared/assets/fonts/Tektur-VariableFont.woff2')
+		format('woff2-variations');
+	font-weight: 400 900;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--default-size: 16px;
 
 	--ff-primary: 'Rubik';
+	--ff-accent: 'Tektur';
 
 	--fw-light: 300;
 	--fw-regular: 400;
@@ -32,7 +42,5 @@
 	--fs-big-text: 1.125rem;
 
 	--fs-switcher: var(--fs-h5);
-
-	--fs-clock-time: 1.7rem;
-	--fs-clock-date: 1rem;
+	--fs-clock: var(--fs-h3);
 }
