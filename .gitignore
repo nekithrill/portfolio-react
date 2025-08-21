@@ -1,6 +1,3 @@
-# server exclude (temporary)
-/server/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
