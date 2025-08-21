@@ -7,26 +7,32 @@ import styles from './ThemeSwitch.module.scss'
 export const ThemeSwitch = () => {
 	const { isDarkTheme, toggleTheme } = useThemeSwitch()
 
-	return (
-		<div className={styles['theme-switch']}>
-			<input
-				id='theme-switch'
-				type='checkbox'
-				checked={isDarkTheme}
-				onChange={toggleTheme}
-				className={styles['input']}
-			/>
+	const buttons = [
+		{
+			icon: <SunIcon isActive={!isDarkTheme} />,
+			size: 22,
+			isActive: !isDarkTheme,
+			onClick: () => isDarkTheme && toggleTheme()
+		},
+		{
+			icon: <MoonIcon isActive={isDarkTheme} />,
+			size: 19,
+			isActive: isDarkTheme,
+			onClick: () => !isDarkTheme && toggleTheme()
+		}
+	]
 
-			<label htmlFor='theme-switch' className={styles['label']} tabIndex={0}>
-				<div className={styles['icons']}>
-					<IconWrapper size={22} color='var(--clr-switch-icon)'>
-						<SunIcon svgClassName={styles['sun']} isActive={!isDarkTheme} />
-					</IconWrapper>
-					<IconWrapper size={20} color='var(--clr-switch-icon)'>
-						<MoonIcon svgClassName={styles['moon']} isActive={isDarkTheme} />
-					</IconWrapper>
-				</div>
-			</label>
+	return (
+		<div className={styles['theme-switcher']}>
+			{buttons.map((btn, index) => (
+				<button
+					key={index}
+					onClick={btn.onClick}
+					className={`${styles['theme-switcher__button']} ${btn.isActive ? styles['active'] : ''}`}
+				>
+					<IconWrapper size={btn.size}>{btn.icon}</IconWrapper>
+				</button>
+			))}
 		</div>
 	)
 }
