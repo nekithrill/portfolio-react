@@ -30,7 +30,6 @@ module.exports = {
 
 		// SCSS
 		'scss/at-rule-no-unknown': true,
-		'scss/at-import-partial-extension': 'never',
 		'scss/at-mixin-pattern': '^[_a-z]+$',
 		'scss/at-function-pattern': '^[_a-z]+$',
 		'scss/dollar-variable-pattern': '^[_a-z]+$',
