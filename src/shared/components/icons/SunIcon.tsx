@@ -1,20 +1,17 @@
 import type { IconProps } from '@/shared/components/icons/icon-wrapper/IconWrapper.types'
 
-export const SunIcon = ({ svgClassName, isActive }: IconProps) => (
+export const SunIcon = ({ isActive }: IconProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
-		viewBox='0 0 24 24'
+		viewBox='0 0 512 512'
 		width='100%'
 		height='100%'
-		fill='currentColor'
-		stroke='currentColor'
-		strokeWidth={1.2}
-		className={`${svgClassName} ${isActive ? 'active' : ''}`}
+		className={`${isActive ? 'active' : ''}`}
 	>
 		<path
-			strokeLinecap='round'
-			strokeLinejoin='round'
-			d='M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z'
+			fill='currentColor'
+			fillRule='evenodd'
+			d='M277.333 405.333v85.334h-42.666v-85.334h42.666Zm99.347-58.823 60.34 60.34-30.17 30.17-60.34-60.34 30.17-30.17Zm-241.36 0 30.17 30.17-60.34 60.34-30.17-30.17 60.34-60.34ZM256 139.353c64.422 0 116.647 52.225 116.647 116.647S320.422 372.647 256 372.647A116.427 116.427 0 0 1 139.353 256c0-64.422 52.225-116.647 116.647-116.647Zm0 42.667c-40.858 0-73.98 33.122-73.98 74.061a73.76 73.76 0 0 0 21.603 52.296c13.866 13.867 32.685 21.641 52.377 21.604 40.858 0 73.98-33.123 73.98-73.981s-33.122-73.98-73.98-73.98Zm234.667 52.647v42.666h-85.334v-42.666h85.334Zm-384 0v42.666H21.333v-42.666h85.334ZM105.15 74.98l60.34 60.34-30.17 30.17-60.34-60.34 30.17-30.17Zm301.698 0 30.17 30.17-60.34 60.34-30.17-30.17 60.34-60.34ZM277.333 21.333v85.334h-42.666V21.333h42.666Z'
 		/>
 	</svg>
 )

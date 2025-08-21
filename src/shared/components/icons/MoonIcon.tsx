@@ -1,20 +1,17 @@
 import type { IconProps } from '@/shared/components/icons/icon-wrapper/IconWrapper.types'
 
-export const MoonIcon = ({ svgClassName, isActive }: IconProps) => (
+export const MoonIcon = ({ isActive }: IconProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
-		viewBox='0 0 24 24'
+		viewBox='0 0 20 20'
 		width='100%'
 		height='100%'
-		fill='currentColor'
-		stroke='currentColor'
-		strokeWidth={1.2}
-		className={`${svgClassName} ${isActive ? 'active' : ''}`}
+		className={`${isActive ? 'active' : ''}`}
 	>
 		<path
-			strokeLinecap='round'
-			strokeLinejoin='round'
-			d='M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z'
+			fill='currentColor'
+			fillRule='evenodd'
+			d='M9.99 17.998a8.007 8.007 0 0 1-6.398-3.195c6.63 1.356 12.578-4.528 11.211-11.211a8.007 8.007 0 0 1 3.195 6.398c0 4.415-3.592 8.008-8.008 8.008M10.61 0a7.486 7.486 0 0 1 2.383 5.485c0 6.84-8.384 10.058-12.993 5.125C.32 15.85 4.67 20 9.99 20 15.52 20 20 15.519 20 9.99 20 4.67 15.85.32 10.61 0'
 		/>
 	</svg>
 )
