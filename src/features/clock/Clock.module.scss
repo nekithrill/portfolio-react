@@ -1,32 +1,41 @@
+@use '/src/app/styles/abstracts/breakpoints' as *;
+
 .clock {
-	// TODO: Переписать стили (если придумаю)
-	width: 12rem;
-	height: 4rem;
+	width: max-content;
+	height: 2.2rem;
+	padding: 0.5rem 1rem;
 
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 
-	font-family: var(--ff-primary);
+	border: var(--clock-border);
+	font-family: var(--ff-accent);
+
+	@include breakpoint('sm') {
+		display: none;
+	}
 
 	&__time,
 	&__date {
-		width: 100%;
-
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
 	&__time {
-		font-size: var(--fs-clock-time);
+		font-size: var(--fs-clock);
 		font-weight: var(--fw-medium);
+		font-variant-numeric: tabular-nums;
 		letter-spacing: 0.05rem;
+		color: var(--clr-clock-time);
 	}
 
 	&__date {
-		font-size: var(--fs-clock-date);
-		font-weight: var(--fw-medium);
+		font-size: var(--fs-clock);
+		font-weight: var(--fw-regular);
 		text-transform: uppercase;
+		color: var(--clr-clock-date);
 	}
 }
