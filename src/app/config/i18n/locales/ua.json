@@ -1,5 +1,6 @@
 {
-	"tile": {
+	"header": {},
+	"section": {
 		"about": {
 			"title": "Про мене",
 			"heading": "Заголовок",
@@ -7,13 +8,27 @@
 		},
 		"skills": {
 			"title": "Навички",
-			"heading": "Заголовок",
-			"text": "Текст"
-		},
-		"education": {
-			"title": "Освіта",
-			"heading": "Заголовок",
-			"text": "Текст"
+			"heading": "Стек",
+			"hard": {
+				"programmingLanguages": "Мови програмування",
+				"other": "Інше"
+			},
+			"soft": {
+				"title": "Софт скіли",
+				"communication": "Комунікабельність",
+				"problemSolving": "Вирішення проблем",
+				"adaptability": "Адаптивність",
+				"teamwork": "Робота в команді",
+				"creativity": "Креативність",
+				"enthusiasm": "Ентузіазм"
+			},
+			"principles": "Принципи",
+			"languages": {
+				"title": "Мови",
+				"english": "Англійська",
+				"ukrainian": "Українська",
+				"russian": "Російська"
+			}
 		},
 		"projects": {
 			"title": "Проєкти",
@@ -25,5 +40,12 @@
 			"heading": "Заголовок",
 			"text": "Текст"
 		}
+	},
+	"footer": {
+		"copyright": "",
+		"privacyPolicy": "",
+		"cookies": "",
+		"scroll": "Скроль",
+		"explore": "для ознайомлення →"
 	}
 }

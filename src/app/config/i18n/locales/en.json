@@ -1,5 +1,6 @@
 {
-	"tile": {
+	"header": {},
+	"section": {
 		"about": {
 			"title": "About me",
 			"heading": "Heading",
@@ -7,13 +8,27 @@
 		},
 		"skills": {
 			"title": "Skills",
-			"heading": "Heading",
-			"text": "Text"
-		},
-		"education": {
-			"title": "Education",
-			"heading": "Heading",
-			"text": "Text"
+			"heading": "Stack",
+			"hard": {
+				"programmingLanguages": "Programming Languages",
+				"other": "Other"
+			},
+			"soft": {
+				"title": "Soft skills",
+				"communication": "Communication",
+				"problemSolving": "Problem solving",
+				"adaptability": "Adaptability",
+				"teamwork": "Teamwork",
+				"creativity": "Creativity",
+				"enthusiasm": "Enthusiasm"
+			},
+			"principles": "Principles",
+			"languages": {
+				"title": "Languages",
+				"english": "English",
+				"ukrainian": "Ukrainian",
+				"russian": "Russian"
+			}
 		},
 		"projects": {
 			"title": "Projects",
@@ -25,5 +40,12 @@
 			"heading": "Heading",
 			"text": "Text"
 		}
+	},
+	"footer": {
+		"copyright": "",
+		"privacyPolicy": "",
+		"cookies": "",
+		"scroll": "Scroll",
+		"explore": "to explore →"
 	}
 }
