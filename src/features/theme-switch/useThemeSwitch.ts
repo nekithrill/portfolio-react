@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import type { ThemeSwitcherResult } from './ThemeSwitcher.types'
+import type { ThemeSwitchResult } from './ThemeSwitch.types'
 import {
 	LOCAL_STORAGE_THEME_KEY,
 	THEME_DARK_CLASS,
 	THEME_LIGHT_CLASS
-} from './ThemeSwitcher.types'
+} from './ThemeSwitch.types'
 
-export default function useThemeSwitch(): ThemeSwitcherResult {
+export default function useThemeSwitch(): ThemeSwitchResult {
 	const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
 		return localStorage.getItem(LOCAL_STORAGE_THEME_KEY) === 'dark'
 	})
