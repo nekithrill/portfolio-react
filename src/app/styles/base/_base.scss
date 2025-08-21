@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 }
 
-// colorful outline while focusing on element
 *:focus-visible {
 	outline: 0.2rem solid var(--clr-accent);
 	outline-offset: 0.1rem;
