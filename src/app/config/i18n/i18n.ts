@@ -9,15 +9,15 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
 const resources: Record<Language, { translation: object }> = {
-	[LANGUAGES.EN]: { translation: enTranslation },
-	[LANGUAGES.RU]: { translation: ruTranslation },
-	[LANGUAGES.UK]: { translation: uaTranslation }
+	[LANGUAGES.EN.value]: { translation: enTranslation },
+	[LANGUAGES.RU.value]: { translation: ruTranslation },
+	[LANGUAGES.UA.value]: { translation: uaTranslation }
 }
 
 i18n.use(initReactI18next).init({
 	resources,
-	lng: LANGUAGES.EN,
-	fallbackLng: LANGUAGES.EN,
+	lng: LANGUAGES.EN.value,
+	fallbackLng: LANGUAGES.EN.value,
 	interpolation: {
 		escapeValue: false
 	}
