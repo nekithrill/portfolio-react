@@ -7,15 +7,17 @@ import styles from './header.module.scss'
 export const Header = () => {
 	return (
 		<header className={styles['header']}>
-			<div className={styles['header__logo']}>
-				<Logo />
-			</div>
-			<div className={styles['header__clock']}>
-				<Clock />
-			</div>
-			<div className={styles['header__settings']}>
-				<LanguageSwitch />
-				<ThemeSwitch />
+			<div className={styles['header__content']}>
+				<div className={styles['header__logo']}>
+					<Logo />
+				</div>
+				<div className={styles['header__clock']}>
+					<Clock />
+				</div>
+				<div className={styles['header__settings']}>
+					<ThemeSwitch />
+					<LanguageSwitch />
+				</div>
 			</div>
 		</header>
 	)
