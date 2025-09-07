@@ -1,12 +1,9 @@
-import type { IconProps } from '@/shared/components/icons/icon-wrapper/IconWrapper.types'
-
-export const MoonIcon = ({ isActive }: IconProps) => (
+export const MoonIcon = () => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 20 20'
 		width='100%'
 		height='100%'
-		className={`${isActive ? 'active' : ''}`}
 	>
 		<path
 			fill='currentColor'
