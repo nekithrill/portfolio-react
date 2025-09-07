@@ -1,0 +1,35 @@
+.navbar {
+	width: 100%;
+	position: relative;
+	border: var(--app-border);
+
+	display: flex;
+	flex-direction: column;
+	background-color: var(--clr-nav-bg);
+
+	font-family: var(--ff-accent);
+	font-weight: var(--fw-medium);
+}
+
+.link {
+	padding: 0.5rem 2.5rem;
+	color: var(--clr-nav-text);
+	transition: background-color 0.2s ease;
+	vertical-align: middle;
+
+	&:hover {
+		background-color: var(--clr-nav-bg-hover);
+		color: var(--clr-nav-text-hover);
+	}
+}
+
+.activeLink {
+	@extend .link;
+	background-color: var(--clr-nav-bg-active);
+	color: var(--clr-nav-text-active);
+}
+
+.icon {
+	position: absolute;
+	left: 0.3125rem;
+}
