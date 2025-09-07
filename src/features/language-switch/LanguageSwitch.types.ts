@@ -8,12 +8,6 @@ export const LANGUAGES = {
 
 export type Language = (typeof LANGUAGES)[keyof typeof LANGUAGES]['value']
 
-export const LANGUAGE_LABELS: Record<Language, string> = {
-	en: 'EN',
-	uk: 'UA',
-	ru: 'RU'
-}
-
 export interface UseLanguageSwitchResult {
 	selectedLanguage: Language
 	changeLanguage: (language: Language) => void

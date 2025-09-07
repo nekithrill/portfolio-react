@@ -1,6 +1,6 @@
-import useLanguageSwitch from '@/features/language-switch/useLanguageSwitch'
 import styles from './LanguageSwitch.module.scss'
-import { LANGUAGES, LANGUAGE_LABELS } from './LanguageSwitch.types'
+import { LANGUAGES } from './LanguageSwitch.types'
+import { useLanguageSwitch } from './useLanguageSwitch'
 
 export const LanguageSwitch = () => {
 	const { selectedLanguage, changeLanguage } = useLanguageSwitch()
@@ -15,7 +15,7 @@ export const LanguageSwitch = () => {
 						lang.value === selectedLanguage ? styles['active'] : ''
 					}`}
 				>
-					{LANGUAGE_LABELS[lang.value]}
+					{lang.label}
 				</button>
 			))}
 		</div>
