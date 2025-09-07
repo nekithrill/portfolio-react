@@ -1,17 +1,14 @@
-import { Footer } from '@/widgets/footer/Footer'
-import { Header } from '@/widgets/header/Header'
-import { ReactNode } from 'react'
+import { Sidebar } from '@/widgets/sidebar/Sidebar'
+import { Outlet } from 'react-router-dom'
+import styles from './MainLayout.module.scss'
 
-interface LayoutProps {
-	children: ReactNode
-}
-
-export function MainLayout({ children }: LayoutProps) {
+export function MainLayout() {
 	return (
-		<>
-			<Header />
-			{children}
-			<Footer />
-		</>
+		<div className={styles['window']}>
+			<Sidebar />
+			<main className={styles['content']}>
+				<Outlet />
+			</main>
+		</div>
 	)
 }
