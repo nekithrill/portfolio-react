@@ -5,10 +5,8 @@ export interface IconWrapperProps {
 	className?: string
 	size?: number
 	color?: string
-	isActive?: boolean
 }
 
 export type IconProps = {
 	svgClassName?: string
-	isActive?: boolean
 }
