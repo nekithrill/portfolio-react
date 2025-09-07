@@ -1,0 +1,14 @@
+.sidebar {
+	height: 100%;
+	width: 18rem;
+	padding: 1rem;
+	border-right: var(--app-border);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: var(--clr-sidebar-transparent);
+	backdrop-filter: blur(4px);
+}
