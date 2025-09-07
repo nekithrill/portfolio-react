@@ -1,14 +1,28 @@
 import '@/app/config/i18n/i18n'
+import { AboutPage } from '@/app/pages/about/AboutPage'
+import { ContactsPage } from '@/app/pages/contacts/ContactsPage'
+import { HomePage } from '@/app/pages/home/HomePage'
+import { ProjectsPage } from '@/app/pages/projects/ProjectsPage'
+import { SkillsPage } from '@/app/pages/skills/SkillsPage'
 import '@/app/styles/globals.scss'
 import { MainLayout } from '@/shared/components/layout/MainLayout'
-import { SectionsLayout } from '@/shared/components/layout/sections-layout/SectionsLayout'
+import { Route, Routes } from 'react-router-dom'
+import { RootProvider } from './providers/RootProvider'
 
 export default function App() {
 	return (
 		<div className='app'>
-			<MainLayout>
-				<SectionsLayout />
-			</MainLayout>
+			<RootProvider>
+				<Routes>
+					<Route path='/' element={<MainLayout />}>
+						<Route index element={<HomePage />} />
+						<Route path='about' element={<AboutPage />} />
+						<Route path='skills' element={<SkillsPage />} />
+						<Route path='projects' element={<ProjectsPage />} />
+						<Route path='contacts' element={<ContactsPage />} />
+					</Route>
+				</Routes>
+			</RootProvider>
 		</div>
 	)
 }
