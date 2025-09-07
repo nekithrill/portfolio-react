@@ -5,8 +5,8 @@
 }
 
 *:focus-visible {
-	outline: 0.2rem solid var(--clr-accent);
-	outline-offset: 0.1rem;
+	outline: 0.3rem solid var(--clr-accent);
+	z-index: 100;
 }
 
 html,
@@ -82,11 +82,18 @@ a {
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 
-	background-color: var(--clr-background);
+	background-image: var(--bg-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: scroll;
+
 	color: var(--clr-text);
+
+	overflow: hidden;
 
 	z-index: 1;
 }
