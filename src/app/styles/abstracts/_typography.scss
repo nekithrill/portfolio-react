@@ -1,8 +1,8 @@
 @font-face {
-	font-family: Rubik;
-	src: url('/src/shared/assets/fonts/Rubik-VariableFont.woff2')
+	font-family: Jura;
+	src: url('/src/shared/assets/fonts/Jura-VariableFont.woff2')
 		format('woff2-variations');
-	font-weight: 300 900;
+	font-weight: 300 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -19,7 +19,7 @@
 :root {
 	--default-size: 16px;
 
-	--ff-primary: 'Rubik';
+	--ff-primary: 'Jura';
 	--ff-accent: 'Tektur';
 
 	--fw-light: 300;
@@ -42,5 +42,5 @@
 	--fs-big-text: 1.125rem;
 
 	--fs-switcher: var(--fs-h5);
-	--fs-clock: var(--fs-h3);
+	--fs-clock: var(--fs-h4);
 }
