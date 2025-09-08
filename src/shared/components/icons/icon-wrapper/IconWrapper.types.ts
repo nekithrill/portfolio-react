@@ -3,8 +3,8 @@ import { ReactNode } from 'react'
 export interface IconWrapperProps {
 	children: ReactNode
 	className?: string
-	size?: number
 	color?: string
+	size: number
 }
 
 export type IconProps = {
