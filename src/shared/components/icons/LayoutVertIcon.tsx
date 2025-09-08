@@ -3,17 +3,14 @@ import { IconProps } from './icon-wrapper/IconWrapper.types'
 export const LayoutVertIcon = ({ svgClassName }: IconProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
-		viewBox='0 0 25 25'
-		fill='none'
+		viewBox='0 0 16 16'
 		width='100%'
 		height='100%'
+		fill='none'
 		className={`${svgClassName}`}
 	>
-		<path
-			fill='currentColor'
-			fillRule='evenodd'
-			clipRule='evenodd'
-			d='M9.5 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm0 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm1.5 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM15.5 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm1.5 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM15.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'
-		/>
+		<g fill='currentColor'>
+			<path d='M3 4V0h4v4H3ZM3 6v4h4V6H3ZM9 6v4h4V6H9ZM9 0v4h4V0H9ZM3 16v-4h4v4H3ZM9 12v4h4v-4H9Z' />
+		</g>
 	</svg>
 )

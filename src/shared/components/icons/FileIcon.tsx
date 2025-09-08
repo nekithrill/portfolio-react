@@ -1,6 +1,6 @@
 import { IconProps } from './icon-wrapper/IconWrapper.types'
 
-export const LayoutHorzIcon = ({ svgClassName }: IconProps) => (
+export const FileIcon = ({ svgClassName }: IconProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 16 16'
@@ -10,7 +10,8 @@ export const LayoutHorzIcon = ({ svgClassName }: IconProps) => (
 		className={`${svgClassName}`}
 	>
 		<g fill='currentColor'>
-			<path d='M0 3h4v4H0V3ZM10 3H6v4h4V3ZM10 9H6v4h4V9ZM12 3h4v4h-4V3ZM16 9h-4v4h4V9ZM4 9H0v4h4V9Z' />
+			<path d='M7 0H2v16h12V7H7V0Z' />
+			<path d='M9 0v5h5L9 0Z' />
 		</g>
 	</svg>
 )

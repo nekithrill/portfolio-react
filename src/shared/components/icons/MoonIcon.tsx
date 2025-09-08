@@ -1,14 +1,16 @@
-export const MoonIcon = () => (
+import { IconProps } from './icon-wrapper/IconWrapper.types'
+
+export const MoonIcon = ({ svgClassName }: IconProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
-		viewBox='0 0 20 20'
+		viewBox='0 0 16 16'
 		width='100%'
 		height='100%'
+		fill='none'
+		className={`${svgClassName}`}
 	>
-		<path
-			fill='currentColor'
-			fillRule='evenodd'
-			d='M9.99 17.998a8.007 8.007 0 0 1-6.398-3.195c6.63 1.356 12.578-4.528 11.211-11.211a8.007 8.007 0 0 1 3.195 6.398c0 4.415-3.592 8.008-8.008 8.008M10.61 0a7.486 7.486 0 0 1 2.383 5.485c0 6.84-8.384 10.058-12.993 5.125C.32 15.85 4.67 20 9.99 20 15.52 20 20 15.519 20 9.99 20 4.67 15.85.32 10.61 0'
-		/>
+		<g fill='currentColor'>
+			<path d='M0 8A8.002 8.002 0 0 1 4.707.707l.947.947a6.5 6.5 0 0 0 8.691 8.691l.948.948A8.002 8.002 0 0 1 0 8Z' />
+		</g>
 	</svg>
 )
