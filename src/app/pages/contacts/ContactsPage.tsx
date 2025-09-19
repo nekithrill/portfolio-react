@@ -1,24 +1,27 @@
-import styles from '@/app/pages/Page.module.scss'
 import { ContactForm } from '@/features/contact-form/ContactForm'
+import Section from '@/shared/components/ui/section/Section'
 import { useTranslation } from 'react-i18next'
+import styles from './ContactsPage.module.scss'
 
 export function ContactsPage() {
 	const { t } = useTranslation('')
 
 	return (
-		<>
-			<div className={styles['contacts__page']}>
-				<h2>{t('section.contacts.title')}</h2>
-				<div className={styles['contacts__inner']}>
-					<div className={styles['contacts__left']}>
-						<p>{t('section.contacts.text')}</p>
-					</div>
+		<div className={styles['contacts']}>
+			<Section
+				useH1={true}
+				title='section.contacts.title'
+				className={styles['contacts__text']}
+			>
+				<p>{t('section.contacts.text')}</p>
+			</Section>
 
-					<div className={styles['contacts__right']}>
-						<ContactForm />
-					</div>
-				</div>
-			</div>
-		</>
+			<Section
+				title='section.contacts.form.title'
+				className={styles['contacts__form']}
+			>
+				<ContactForm />
+			</Section>
+		</div>
 	)
 }

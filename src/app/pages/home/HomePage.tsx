@@ -1,13 +1,20 @@
-import styles from '@/app/pages/Page.module.scss'
-// import { useTranslation } from 'react-i18next'
+import Section from '@/shared/components/ui/section/Section'
+import { useTranslation } from 'react-i18next'
+import styles from './HomePage.module.scss'
 
 export function HomePage() {
-	// const { t } = useTranslation()
+	const { t } = useTranslation()
 
 	return (
 		<>
-			<div className={styles['home__page']}>
-				<h1>Hello there!</h1>
+			<div className={styles['home']}>
+				<Section
+					useH1={true}
+					title='section.home.title'
+					className={styles['home__intro']}
+				>
+					<p>{t('section.home.text')}</p>
+				</Section>
 			</div>
 		</>
 	)
