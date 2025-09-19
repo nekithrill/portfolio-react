@@ -3,29 +3,29 @@ import { FileIcon } from '@/shared/components/icons/FileIcon'
 import { IconWrapper } from '@/shared/components/icons/icon-wrapper/IconWrapper'
 import { InspectIcon } from '@/shared/components/icons/InspectIcon'
 import React from 'react'
-import styles from './FileItem.module.scss'
-import { FileItemProps } from './FileItem.types'
+import styles from './FileContainer.module.scss'
+import { FileContainerProps } from './FileContainer.types'
 
-export const FileItem: React.FC<FileItemProps> = ({
+export const FileContainer: React.FC<FileContainerProps> = ({
 	fileName,
 	fileUrl,
 	icon
 }) => {
 	return (
-		<div className={styles['fileItem']}>
-			<div className={styles['fileItem__icon']}>
+		<div className={styles['file-container']}>
+			<div className={styles['file-container__icon']}>
 				{icon || (
-					<IconWrapper size={20}>
+					<IconWrapper size={20} color='var(--clr-accent)'>
 						<FileIcon />
 					</IconWrapper>
 				)}
 			</div>
 
-			<span className={styles['fileItem__name']}>{fileName}</span>
+			<span className={styles['file-container__name']}>{fileName}</span>
 
-			<div className={styles['fileItem__actions']}>
+			<div className={styles['file-container__actions']}>
 				<a
-					className={styles['fileItem__button']}
+					className={styles['file-container__button']}
 					href={fileUrl}
 					target='_blank'
 					rel='noopener noreferrer'
@@ -34,7 +34,7 @@ export const FileItem: React.FC<FileItemProps> = ({
 						<InspectIcon />
 					</IconWrapper>
 				</a>
-				<a className={styles['fileItem__button']} href={fileUrl} download>
+				<a className={styles['file-container__button']} href={fileUrl} download>
 					<IconWrapper size={18}>
 						<DownloadIcon />
 					</IconWrapper>

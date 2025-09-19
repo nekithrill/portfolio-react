@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export interface FileItemProps {
+export interface FileContainerProps {
 	fileName: string
 	fileUrl: string
 	icon?: ReactNode
