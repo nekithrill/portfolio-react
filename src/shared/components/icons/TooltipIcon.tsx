@@ -1,6 +1,6 @@
 import { IconProps } from './icon-wrapper/IconWrapper.types'
 
-export const DownloadIcon = ({ svgClassName }: IconProps) => (
+export const TooltipIcon = ({ svgClassName }: IconProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 16 16'
@@ -11,7 +11,9 @@ export const DownloadIcon = ({ svgClassName }: IconProps) => (
 	>
 		<path
 			fill='currentColor'
-			d='M8 2a4 4 0 0 1 4 4v1a4 4 0 0 1 4 4v3H9l2-2v-1H9V8H7v3H5v1l2 2H0v-4a4 4 0 0 1 4-4 4 4 0 0 1 4-4Z'
+			fillRule='evenodd'
+			clipRule='evenodd'
+			d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM8 5a1.5 1.5 0 0 0-1.5 1.5V7h-2v-.5A3.5 3.5 0 1 1 8 10H7V8h1a1.5 1.5 0 1 0 0-3Zm1 6v2H7v-2h2Z'
 		/>
 	</svg>
 )
