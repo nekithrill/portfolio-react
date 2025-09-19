@@ -1,6 +1,6 @@
 .sidebar {
 	height: 100%;
-	width: 18rem;
+	width: 20rem;
 	padding: 1rem;
 	border-right: var(--app-border);
 
@@ -9,6 +9,6 @@
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: var(--clr-sidebar-transparent);
-	backdrop-filter: blur(4px);
+	background-color: var(--clr-sidebar);
+	backdrop-filter: blur(0.125rem);
 }
