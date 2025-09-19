@@ -7,6 +7,7 @@ import { SkillsPage } from '@/app/pages/skills/SkillsPage'
 import '@/app/styles/globals.scss'
 import { MainLayout } from '@/shared/components/layout/MainLayout'
 import { Route, Routes } from 'react-router-dom'
+import { PrivacyPage } from './pages/privacy-credits/PrivacyPage'
 import { RootProvider } from './providers/RootProvider'
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
 						<Route path='skills' element={<SkillsPage />} />
 						<Route path='projects' element={<ProjectsPage />} />
 						<Route path='contacts' element={<ContactsPage />} />
+						<Route path='privacy' element={<PrivacyPage />} />
 					</Route>
 				</Routes>
 			</RootProvider>
