@@ -37,8 +37,12 @@ h3,
 h4,
 h5,
 h6 {
+	margin-bottom: 1rem;
+
+	text-transform: uppercase;
 	font-weight: var(--fw-medium);
-	color: var(--clr-app-text);
+	font-family: var(--ff-accent);
+	color: var(--clr-accent);
 }
 
 h1 {
@@ -68,6 +72,7 @@ h6 {
 p {
 	font-size: var(--fs-text);
 	font-weight: var(--fw-regular);
+	text-align: justify;
 }
 
 a {
