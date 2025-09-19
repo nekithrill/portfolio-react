@@ -1,5 +1,5 @@
 .theme-switcher {
-	--width: 5rem;
+	--width: 6.5rem;
 	--height: 2.2rem;
 
 	width: var(--width);
@@ -16,8 +16,8 @@
 
 		flex: 1;
 		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
 
 		background-color: var(--clr-switcher-bg);
 		color: var(--clr-switcher-text);
@@ -47,9 +47,8 @@
 }
 
 .sun-icon {
-	margin-right: 0.0625rem;
+	margin: 0 0.0625rem 0 0;
 }
-
 .moon-icon {
-	margin-left: 0.0625rem;
+	margin: 0 0 0.0625rem 0.0625rem;
 }
