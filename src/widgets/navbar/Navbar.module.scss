@@ -16,6 +16,7 @@
 	color: var(--clr-nav-text);
 	transition: background-color 0.2s ease;
 	vertical-align: middle;
+	text-transform: uppercase;
 
 	&:hover {
 		background-color: var(--clr-nav-bg-hover);
