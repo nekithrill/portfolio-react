@@ -1,0 +1,28 @@
+.about {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	&__intro,
+	&__education {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__intro {
+		flex: 1 1 50%;
+
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__education {
+		flex: 1 1 40%;
+		h3 {
+			margin: 0;
+		}
+	}
+}

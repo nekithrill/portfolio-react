@@ -1,0 +1,14 @@
+.contacts {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	&__text {
+		flex: 1 1 60%;
+	}
+	&__form {
+		flex: 1 1 35%;
+	}
+}
