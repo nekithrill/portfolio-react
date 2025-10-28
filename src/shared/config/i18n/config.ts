@@ -1,7 +1,4 @@
-import {
-	LANGUAGES,
-	type Language
-} from '@/features/language-switch/LanguageSwitch.types'
+import { LANGUAGES, type Language } from '@/shared/types/locale'
 import enTranslation from '@dictionaries/en.json'
 import ruTranslation from '@dictionaries/ru.json'
 import uaTranslation from '@dictionaries/ua.json'
