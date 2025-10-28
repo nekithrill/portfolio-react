@@ -2,13 +2,13 @@
 	height: 100%;
 	width: 20rem;
 	padding: 1rem;
-	border-right: var(--app-border);
+	border-right: var(--border-width) solid var(--border-color);
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: var(--clr-sidebar);
-	backdrop-filter: blur(0.125rem);
+	background-color: var(--clr-sidebar-bg);
+	user-select: none;
 }
