@@ -15,7 +15,7 @@ export const FileContainer: React.FC<FileContainerProps> = ({
 		<div className={styles['file-container']}>
 			<div className={styles['file-container__icon']}>
 				{icon || (
-					<IconWrapper size={20} color='var(--clr-accent)'>
+					<IconWrapper width={22} height={22} color='var(--clr-accent)'>
 						<FileIcon />
 					</IconWrapper>
 				)}
@@ -30,12 +30,12 @@ export const FileContainer: React.FC<FileContainerProps> = ({
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					<IconWrapper size={18}>
+					<IconWrapper width={22} height={22}>
 						<InspectIcon />
 					</IconWrapper>
 				</a>
 				<a className={styles['file-container__button']} href={fileUrl} download>
-					<IconWrapper size={18}>
+					<IconWrapper width={22} height={22}>
 						<DownloadIcon />
 					</IconWrapper>
 				</a>

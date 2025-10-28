@@ -42,14 +42,9 @@
 	background-color: var(--clr-neutral);
 	transition: background-color 0.3s ease;
 
-	&:hover {
-		background-color: tomato;
-	}
-}
-
-.file-container__button[download] {
-	background-color: var(--clr-accent);
-	&:hover {
-		background-color: tomato;
+	&:hover,
+	&:focus-visible {
+		background-color: var(--clr-accent-hover);
+		color: var(--clr-text-sidebar);
 	}
 }
