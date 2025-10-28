@@ -20,9 +20,11 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 | Package(s)                              | Purpose                     |
 | --------------------------------------- | --------------------------- |
 | **React**, **ReactDOM**                 | UI                          |
+| **react-router-dom**                    | Routing                     |
 | **i18next**, **react-i18next**          | Localization                |
 | **Sass**                                | Styling                     |
-| **TypeScript**, **Vite**                | Type-safe frontend tooling  |
+| **TypeScript**, **Vite**                | Type-safe tooling           |
+| **Framer Motion**                       | Animations                  |
 | **ESLint**, **Prettier**, **Stylelint** | Code quality and formatting |
 
 <br>
@@ -34,18 +36,20 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 <br>
 
-| Script           | Command                            | Purpose                                                |
-| ---------------- | ---------------------------------- | ------------------------------------------------------ |
-| `dev`            | `vite`                             | Runs project in development mode.                      |
-| `build`          | `tsc -b && vite build`             | Builds **TypeScript** + bundle project using **Vite**. |
-| `preview`        | `vite preview`                     | Local preview of production build.                     |
-| `lint`           | `eslint . --ext .ts,.tsx,.js,.jsx` | Checks JS/TS files with **ESLint**.                    |
-| `lint:fix`       | `npm run lint -- --fix`            | Autofix of **ESLint** errors.                          |
-| `lint:style`     | `stylelint "src/**/*.{css,scss}"`  | Checks CSS/SCSS files with **Stylelint**.              |
-| `lint:style:fix` | `npm run lint:style -- --fix`      | Autofix of **Stylelint** errors.                       |
-| `format:check`   | `prettier --check .`               | Checks formatting with **Prettier**.                   |
-| `format`         | `prettier --write .`               | Formats files according to **Prettier** rules.         |
-| `typecheck`      | `tsc --build`                      | Types check with **TypeScript**.                       |
+| Script         | Command                                                             | Purpose                                                  |
+| -------------- | ------------------------------------------------------------------- | -------------------------------------------------------- |
+| `dev`          | `vite`                                                              | Runs project in development mode.                        |
+| `build`        | `tsc -b && vite build`                                              | Builds **TypeScript** and bundles project with **Vite**. |
+| `preview`      | `vite preview`                                                      | Local preview of production build.                       |
+| `check`        | `npm run check:lint && npm run check:style && npm run check:format` | Runs all checks: ESLint, Stylelint, and Prettier.        |
+| `check:lint`   | `eslint 'src/**/*.{ts,tsx,js,jsx}'`                                 | Checks JS/TS files with **ESLint**.                      |
+| `check:style`  | `stylelint 'src/**/*.{css,scss}'`                                   | Checks CSS/SCSS files with **Stylelint**.                |
+| `check:format` | `prettier --check .`                                                | Checks code formatting with **Prettier**.                |
+| `fix`          | `npm run fix:lint && npm run fix:style && npm run fix:format`       | Runs autofix for ESLint, Stylelint, and Prettier.        |
+| `fix:lint`     | `eslint 'src/**/*.{ts,tsx,js,jsx}' --fix`                           | Autofix **ESLint** errors.                               |
+| `fix:style`    | `stylelint 'src/**/*.{css,scss}' --fix`                             | Autofix **Stylelint** errors.                            |
+| `fix:format`   | `prettier --write .`                                                | Formats code according to **Prettier** rules.            |
+|                |
 
 </details>
 
@@ -71,7 +75,7 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 The project was implemented using an adapted **FSD architecture**: the key principles of layering (app, features, shared, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
 
-📁 `app`: entry point, configs, providers, global styles.
+📁 `app`: pages, global styles.
 
 📁 `widgets`: blocks that builds from features/shared and used at app level.
 
@@ -80,15 +84,21 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 📁 `shared`: reusable stuff (ui, layouts, icons, hooks, assets).
 
 <pre lang="md">📦 root
+├── 📁 dictionaries
+│    ├── 📄 en.json
+│    ├── 📄 ua.json
+│    └── 📄 ru.json
+│
 ├── 📁 src  
 │    ├── 📁 app
-│    │    ├── 📁 config
+│    │    ├── 📁 pages
 │    │    ├── 📁 styles
 │    │    ├── 📄 App.tsx
 │    │    └── 📄 main.tsx
 │    │
 │    ├── 📁 features
 │    │    ├── 📁 contact-form
+│    │    ├── 📁 file-container
 │    │    ├── 📁 clock
 │    │    ├── 📁 language-switch
 │    │    └── 📁 theme-switch
@@ -96,25 +106,27 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 │    ├── 📁 shared
 │    │    ├── 📁 assets
 │    │    ├── 📁 components
-│    │    └── 📁 hooks
+│    │    ├── 📁 config
+│    │    ├── 📁 hooks
+│    │    ├── 📁 providers
+│    │    └── 📁 types
 │    │    
 │    └── 📁 widgets
 │         ├── 📁 header
 │         ├── 📁 footer
-│         └── 📁 content-tile
+│         ├── 📁 navbar
+│         └── 📁 sidebar
 │
 ├── 📄 index.html
 ├── ⚙️ .gitignore
-├── ⚙️ .eslintignore
-├── ⚙️ .eslintrc.cjs
 ├── ⚙️ .prettierignore
 ├── ⚙️ .prettierrc
 ├── ⚙️ .stylelintrc.cjs
+├── ⚙️ .eslintrc.cjs
+├── ⚙️ global.d.ts
 ├── ⚙️ tsconfig.json
-├── ⚙️ tsconfig.app.json
 ├── ⚙️ tsconfig.node.json
 ├── ⚙️ vite.config.ts
 ├── ⚙️ vite-env.d.ts
-├── ⚙️ global.d.ts
 └── ⚙️ package.json
 </pre>
