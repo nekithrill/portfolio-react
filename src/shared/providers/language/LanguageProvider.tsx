@@ -2,9 +2,19 @@ import {
 	Language,
 	LANGUAGES,
 	LOCAL_STORAGE_LANGUAGE_KEY
-} from '@/features/language-switch/LanguageSwitch.types'
-import React, { createContext, useContext, useEffect, useState } from 'react'
+} from '@/shared/types/locale'
+import {
+	createContext,
+	useContext,
+	useEffect,
+	useState,
+	type ReactNode
+} from 'react'
 import { useTranslation } from 'react-i18next'
+
+interface LanguageProviderProps {
+	children: ReactNode
+}
 
 interface LanguageContextType {
 	language: Language
@@ -15,9 +25,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 	undefined
 )
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
-	children
-}) => {
+export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 	const { i18n } = useTranslation()
 	const [language, setLanguage] = useState<Language>(() => {
 		try {
