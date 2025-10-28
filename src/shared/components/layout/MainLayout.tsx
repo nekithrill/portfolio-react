@@ -4,11 +4,13 @@ import styles from './MainLayout.module.scss'
 
 export function MainLayout() {
 	return (
-		<div className={styles['window']}>
-			<Sidebar />
-			<main className={styles['content']}>
-				<Outlet />
-			</main>
+		<div className={styles['app']}>
+			<div className={styles['window']}>
+				<Sidebar />
+				<main className={styles['content']}>
+					<Outlet />
+				</main>
+			</div>
 		</div>
 	)
 }
