@@ -1,36 +1,38 @@
 .navbar {
 	width: 100%;
 	position: relative;
-	border: var(--app-border);
+	border: var(--border-width) solid var(--border-color);
 
 	display: flex;
 	flex-direction: column;
-	background-color: var(--clr-nav-bg);
 
 	font-family: var(--ff-accent);
-	font-weight: var(--fw-medium);
-}
+	font-weight: var(--fw-bold);
 
-.link {
-	padding: 0.5rem 2.5rem;
-	color: var(--clr-nav-text);
-	transition: background-color 0.2s ease;
-	vertical-align: middle;
-	text-transform: uppercase;
+	background-color: var(--clr-nav-bg);
 
-	&:hover {
-		background-color: var(--clr-nav-bg-hover);
-		color: var(--clr-nav-text-hover);
+	&__link {
+		display: flex;
+		gap: 1rem;
+
+		padding: 0.5rem 0 0.5rem 0.5rem;
+		text-transform: uppercase;
+		vertical-align: middle;
+		color: var(--clr-nav-text);
+		transition:
+			background-color 0.5s ease,
+			color 0.5s ease;
+		position: relative;
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--clr-nav-bg-hover);
+			color: var(--clr-nav-text-hover);
+		}
+
+		&--active {
+			background-color: var(--clr-nav-bg-active);
+			color: var(--clr-nav-text-active);
+		}
 	}
-}
-
-.activeLink {
-	@extend .link;
-	background-color: var(--clr-nav-bg-active);
-	color: var(--clr-nav-text-active);
-}
-
-.icon {
-	position: absolute;
-	left: 0.3125rem;
 }

@@ -2,9 +2,9 @@ import { IconWrapper } from '@/shared/components/icons/icon-wrapper/IconWrapper'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.scss'
-import { navItems } from './Navbar.types'
+import { navItems } from './NavbarItems'
 
-export default function Navbar() {
+export const Navbar = () => {
 	const { t } = useTranslation()
 
 	return (
@@ -15,13 +15,15 @@ export default function Navbar() {
 					<NavLink
 						key={item.path || item.labelKey}
 						to={item.path}
-						className={({ isActive }) =>
-							isActive ? styles['activeLink'] : styles['link']
-						}
 						end
+						className={({ isActive }) =>
+							isActive
+								? `${styles['navbar__link']} ${styles['navbar__link--active']}`
+								: styles['navbar__link']
+						}
 					>
 						{Icon && (
-							<IconWrapper size={24} className={styles['icon']}>
+							<IconWrapper width={24} height={24}>
 								<Icon />
 							</IconWrapper>
 						)}
