@@ -5,10 +5,27 @@
 	flex-wrap: wrap;
 	gap: 2rem;
 
+	position: relative;
+
 	&__text {
-		flex: 1 1 60%;
+		flex: 1 1 55%;
 	}
 	&__form {
-		flex: 1 1 35%;
+		flex: 1 1 40%;
+	}
+	&__socials {
+		flex: 1;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		.item {
+			&:hover,
+			&:focus-visible {
+				color: green;
+			}
+		}
 	}
 }
