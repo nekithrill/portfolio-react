@@ -11,7 +11,7 @@ export function ProjectsPage() {
 				<Section
 					useH1={true}
 					title='section.projects.title'
-					className={styles['projects__']}
+					className={styles['projects__grid']}
 				>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam

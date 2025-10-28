@@ -1,21 +1,23 @@
 import Section from '@/shared/components/ui/section/Section'
 import { useTranslation } from 'react-i18next'
+import { homeData } from './HomeData'
 import styles from './HomePage.module.scss'
 
 export function HomePage() {
 	const { t } = useTranslation()
 
 	return (
-		<>
-			<div className={styles['home']}>
+		<div className={styles['home']}>
+			{homeData.map((section, index) => (
 				<Section
-					useH1={true}
-					title='section.home.title'
-					className={styles['home__intro']}
+					key={index}
+					useH1={section.useH1}
+					title={section.title}
+					className={styles[section.className]}
 				>
-					<p>{t('section.home.text')}</p>
+					<p>{t(section.text)}</p>
 				</Section>
-			</div>
-		</>
+			))}
+		</div>
 	)
 }

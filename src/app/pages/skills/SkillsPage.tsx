@@ -29,10 +29,6 @@ export function SkillsPage() {
 							<LevelMarker level={3} />
 							{t('section.skills.hard.level.advanced')}
 						</p>
-						<p>
-							<LevelMarker level={4} />
-							{t('section.skills.hard.level.expert')}
-						</p>
 					</>
 				}
 			>
@@ -42,7 +38,7 @@ export function SkillsPage() {
 							<h2>{t(heading)}</h2>
 							<div className={styles['inner__chips']}>
 								{items.map(({ name, level }) => (
-									<Chip key={name} name={name} level={level as 1 | 2 | 3 | 4} />
+									<Chip key={name} name={name} level={level as 1 | 2 | 3} />
 								))}
 							</div>
 						</div>
@@ -78,11 +74,9 @@ export function SkillsPage() {
 			>
 				<ul>
 					{skillsData.languages.map(lang => (
-						<li key={lang.key}>
+						<li key={lang.key} className={styles['skills__languages_item']}>
 							{t(lang.key)}{' '}
-							<span className={styles['skills__languages_level']}>
-								{t(lang.level)}
-							</span>
+							<Chip name={t(lang.level)} level={1} showMarker={false} />
 						</li>
 					))}
 				</ul>
