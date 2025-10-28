@@ -3,6 +3,13 @@
    License: none (public domain)
 */
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	outline-offset: 0;
+}
+
 html,
 body,
 div,
