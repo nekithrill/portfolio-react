@@ -1,15 +1,14 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './Section.module.scss'
 import { SectionProps } from './Section.types'
 
-const Section: React.FC<SectionProps> = ({
+const Section = ({
 	useH1 = false,
 	title,
 	children,
 	className,
 	footerInfo
-}) => {
+}: SectionProps) => {
 	const { t } = useTranslation()
 	const TitleTag = useH1 ? 'h1' : 'h2'
 
