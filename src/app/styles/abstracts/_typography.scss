@@ -1,6 +1,6 @@
 @font-face {
-	font-family: Jura;
-	src: url('/src/shared/assets/fonts/Jura-VariableFont.woff2')
+	font-family: JetBrains;
+	src: url('/src/shared/assets/fonts/JetBrainsMono-VariableFont.woff2')
 		format('woff2-variations');
 	font-weight: 300 700;
 	font-style: normal;
@@ -19,7 +19,7 @@
 :root {
 	--default-size: 16px;
 
-	--ff-primary: 'Jura';
+	--ff-primary: 'JetBrains';
 	--ff-accent: 'Tektur';
 
 	--fw-light: 300;
