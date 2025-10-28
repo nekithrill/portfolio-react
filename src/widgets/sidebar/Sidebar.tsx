@@ -1,6 +1,6 @@
-import { Footer } from '../footer/Footer'
-import { Header } from '../header/Header'
-import Navbar from '../navbar/Navbar'
+import { Footer } from '@/widgets/footer/Footer'
+import { Header } from '@/widgets/header/Header'
+import { Navbar } from '@/widgets/navbar/Navbar'
 import styles from './Sidebar.module.scss'
 
 export const Sidebar = () => {
