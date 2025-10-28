@@ -9,9 +9,8 @@ export const DownloadIcon = ({ svgClassName }: IconProps) => (
 		fill='none'
 		className={`${svgClassName}`}
 	>
-		<path
-			fill='currentColor'
-			d='M8 2a4 4 0 0 1 4 4v1a4 4 0 0 1 4 4v3H9l2-2v-1H9V8H7v3H5v1l2 2H0v-4a4 4 0 0 1 4-4 4 4 0 0 1 4-4Z'
-		/>
+		<g fill='currentColor'>
+			<path d='M13 7h-3V0H6v7H3v1l5 5 5-5V7ZM14 14H2v2h12v-2Z' />
+		</g>
 	</svg>
 )
