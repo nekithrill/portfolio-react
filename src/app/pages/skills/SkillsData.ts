@@ -51,7 +51,7 @@ export const skillsData = {
 	languages: [
 		{
 			key: 'section.skills.languages.english',
-			level: 'b1'
+			level: 'B1'
 		},
 		{
 			key: 'section.skills.languages.ukrainian',
