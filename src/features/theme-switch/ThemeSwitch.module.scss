@@ -1,51 +1,5 @@
-.theme-switcher {
-	--width: 6.5rem;
-	--height: 2.2rem;
-
-	width: var(--width);
-	height: var(--height);
-	border: var(--switcher-border);
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	&__button {
-		height: 100%;
-		border: none;
-
-		flex: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		background-color: var(--clr-switcher-bg);
-		color: var(--clr-switcher-text);
-		font-family: var(--ff-accent);
-		font-size: var(--fs-switcher);
-		transition:
-			background-color 0.3s ease,
-			color 0.3s ease,
-			transform 0.2s ease;
-		cursor: pointer;
-
-		&:hover {
-			background-color: var(--clr-switcher-bg-hover);
-			color: var(--clr-switcher-text-hover);
-		}
-
-		&.active {
-			background-color: var(--clr-switcher-bg-active);
-			color: var(--clr-switcher-text-active);
-			font-weight: bold;
-		}
-
-		svg {
-			pointer-events: none;
-		}
-	}
+.system-icon {
 }
-
 .sun-icon {
 	margin: 0 0.0625rem 0 0;
 }
