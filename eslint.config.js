@@ -25,7 +25,7 @@ export default [
 		files: ['src/**/*.{ts,tsx}', 'global.d.ts'],
 		languageOptions: {
 			parser: tsParser,
-			parserOptions: { project: './tsconfig.app.json' },
+			parserOptions: { project: './tsconfig.json' },
 			globals: globals.browser
 		},
 		settings: { react: { version: 'detect' } },
