@@ -1,15 +1,15 @@
 .chip {
-	padding: 0.1rem 0.5rem;
+	padding: 0.1rem 0.4rem;
 
 	display: inline-flex;
 	align-items: center;
 
-	font-weight: var(--fw-bold);
-	background-color: var(--clr-primary);
+	font-weight: var(--fw-medium);
+	background-color: var(--clr-chip-bg);
 
 	&__marker {
 		display: inline-block;
-		background-color: currentColor;
+		background-color: currentcolor;
 		margin-right: 0.4rem;
 
 		&--lvl1 {
