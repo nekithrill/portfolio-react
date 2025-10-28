@@ -1,18 +1,21 @@
-import '@/app/config/i18n/i18n'
 import { AboutPage } from '@/app/pages/about/AboutPage'
 import { ContactsPage } from '@/app/pages/contacts/ContactsPage'
 import { HomePage } from '@/app/pages/home/HomePage'
+import { PrivacyPage } from '@/app/pages/privacy/PrivacyPage'
 import { ProjectsPage } from '@/app/pages/projects/ProjectsPage'
 import { SkillsPage } from '@/app/pages/skills/SkillsPage'
 import '@/app/styles/globals.scss'
 import { MainLayout } from '@/shared/components/layout/MainLayout'
+import { Background } from '@/shared/components/ui/background/Background'
+import '@/shared/config/i18n/config'
+import { RootProvider } from '@/shared/providers/RootProvider'
 import { Route, Routes } from 'react-router-dom'
-import { PrivacyPage } from './pages/privacy-credits/PrivacyPage'
-import { RootProvider } from './providers/RootProvider'
 
 export default function App() {
 	return (
-		<div className='app'>
+		<>
+			<Background cellSize={62} lineColor='var(--clr-grid-line)' speed={1.5} />
+
 			<RootProvider>
 				<Routes>
 					<Route path='/' element={<MainLayout />}>
@@ -25,6 +28,6 @@ export default function App() {
 					</Route>
 				</Routes>
 			</RootProvider>
-		</div>
+		</>
 	)
 }
