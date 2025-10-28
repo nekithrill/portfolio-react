@@ -1,7 +1,7 @@
+import type { UseClockResult } from '@/shared/types/time'
+import { DATE_TIME_OPTIONS, UPDATE_INTERVAL } from '@/shared/types/time'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import type { UseClockResult } from './Clock.types'
-import { DATE_TIME_OPTIONS, UPDATE_INTERVAL } from './Clock.types'
 
 export default function useClock(): UseClockResult {
 	const [now, setNow] = useState(new Date())
