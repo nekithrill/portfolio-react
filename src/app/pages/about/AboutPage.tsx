@@ -1,39 +1,48 @@
 import { FileContainer } from '@/features/file-container/FileContainer'
+import { Card } from '@/shared/components/ui/card/Card'
 import Section from '@/shared/components/ui/section/Section'
 import { useTranslation } from 'react-i18next'
+import { aboutData } from './AboutData'
 import styles from './AboutPage.module.scss'
 
 export function AboutPage() {
 	const { t } = useTranslation()
+	const { cv, education } = aboutData
 
 	return (
 		<div className={styles['about']}>
 			<Section
-				useH1={true}
+				useH1
 				title='section.about.title'
 				className={styles['about__intro']}
 				footerInfo={
-					<FileContainer
-						fileName='CV_Nekithrill.pdf'
-						fileUrl='/src/shared/assets/example.pdf'
-					/>
+					<FileContainer fileName={cv.fileName} fileUrl={cv.fileUrl} />
 				}
 			>
-				<p>{t('section.about.text')}</p>
+				<p>{t('section.about.text.frontend')}</p>
+				<p>{t('section.about.text.backend')}</p>
+				<p>{t('section.about.text.learn')}</p>
 			</Section>
 
 			<Section
-				title='section.about.educationTitle'
+				title='section.about.education.title'
 				className={styles['about__education']}
 			>
-				<div className={styles['about__item']}>
-					<h3>2017-2021 ЄПК ЗНУ</h3>
-					<p>description</p>
-				</div>
-				<div className={styles['about__item']}>
-					<h3>2021-2024 ЗНУ</h3>
-					<p>description</p>
-				</div>
+				{education.map(({ place, years, degree, specialty }) => (
+					<Card
+						key={years}
+						title={years}
+						variant='education'
+						content={
+							<>
+								<p>
+									{t(`${degree}`)} - {t(`${specialty}`)}
+								</p>
+								<p>{t(`${place}`)}</p>
+							</>
+						}
+					/>
+				))}
 			</Section>
 		</div>
 	)
