@@ -2,9 +2,11 @@ import { ReactNode } from 'react'
 
 export interface IconWrapperProps {
 	children: ReactNode
-	size: number
+	width: number
+	height: number
 	className?: string
 	color?: string
+	bgc?: string
 }
 
 export type IconProps = {
