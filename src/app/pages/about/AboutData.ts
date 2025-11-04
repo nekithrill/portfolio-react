@@ -15,6 +15,10 @@ export const aboutData = {
 			years: '2021 – 2024',
 			degree: 'section.about.education.bachelor',
 			specialty: 'section.about.education.specialty'
+		},
+		{
+			years: '2024 – now',
+			specialty: 'section.about.education.selfEducation'
 		}
 	]
 }

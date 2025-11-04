@@ -22,4 +22,9 @@
 			margin: 0;
 		}
 	}
+
+	&__content {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 }

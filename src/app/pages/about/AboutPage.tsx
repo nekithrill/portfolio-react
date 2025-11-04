@@ -15,6 +15,7 @@ export function AboutPage() {
 				useH1
 				title='section.about.title'
 				className={styles['about__intro']}
+				contentClassName={styles['about__content']}
 				footerInfo={
 					<FileContainer fileName={cv.fileName} fileUrl={cv.fileUrl} />
 				}
@@ -27,6 +28,7 @@ export function AboutPage() {
 			<Section
 				title='section.about.education.title'
 				className={styles['about__education']}
+				contentClassName={styles['about__content']}
 			>
 				{education.map(({ place, years, degree, specialty }) => (
 					<Card
@@ -34,12 +36,16 @@ export function AboutPage() {
 						title={years}
 						variant='education'
 						content={
-							<>
-								<p>
-									{t(`${degree}`)} - {t(`${specialty}`)}
-								</p>
-								<p>{t(`${place}`)}</p>
-							</>
+							!place || !degree || !specialty ? (
+								<p>{t('section.about.education.selfEducation')}</p>
+							) : (
+								<>
+									<p>
+										{t(degree)} - {t(specialty)}
+									</p>
+									<p>{t(place)}</p>
+								</>
+							)
 						}
 					/>
 				))}
