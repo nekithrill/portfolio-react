@@ -5,10 +5,11 @@ import styles from './HomePage.module.scss'
 
 export function HomePage() {
 	const { t } = useTranslation()
+	const { sections } = homeData
 
 	return (
 		<div className={styles['home']}>
-			{homeData.map((section, index) => (
+			{sections.map((section, index) => (
 				<Section
 					key={index}
 					useH1={section.useH1}
