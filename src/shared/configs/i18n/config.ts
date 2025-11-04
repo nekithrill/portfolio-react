@@ -1,7 +1,7 @@
+import enTranslation from '@/shared/configs/i18n/locales/en.json'
+import ruTranslation from '@/shared/configs/i18n/locales/ru.json'
+import uaTranslation from '@/shared/configs/i18n/locales/ua.json'
 import { LANGUAGES, type Language } from '@/shared/types/locale'
-import enTranslation from '@dictionaries/en.json'
-import ruTranslation from '@dictionaries/ru.json'
-import uaTranslation from '@dictionaries/ua.json'
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 

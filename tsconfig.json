@@ -29,8 +29,7 @@
 		// Project Structure & Paths
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./src/*"],
-			"@dictionaries/*": ["./dictionaries/*"]
+			"@/*": ["./src/*"]
 		},
 		"types": ["vite/client"]
 	},

@@ -8,7 +8,7 @@ import { SkillsPage } from '@/app/pages/skills/SkillsPage'
 import { RootProvider } from '@/app/providers/RootProvider'
 import '@/app/styles/globals.scss'
 import { Background } from '@/shared/components/ui/background/Background'
-import '@/shared/config/i18n/config'
+import '@/shared/configs/i18n/config'
 import { Route, Routes } from 'react-router-dom'
 
 export default function App() {

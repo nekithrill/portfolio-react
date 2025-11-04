@@ -7,8 +7,7 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		alias: {
-			'@': path.resolve(__dirname, './src'),
-			'@dictionaries': path.resolve(__dirname, './dictionaries')
+			'@': path.resolve(__dirname, './src')
 		}
 	},
 	server: {
