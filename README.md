@@ -60,7 +60,7 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 | Type               | Support | Notes                                                  |
 | ------------------ | :-----: | ------------------------------------------------------ |
 | 🌐 Modern browsers |   ✅    | Chrome, Firefox, Safari, Edge, Opera (last 2 versions) |
-| 🌐 IE              |   ❌    | не поддерживается                                      |
+| 🌐 IE              |   ❌    | not supported                                          |
 | 💻 Desktop         |   ✅    | ≥1024px                                                |
 | 📟 Tablet          |   ✅    | ≥768px                                                 |
 | 📱 Phone           |   ✅    | ≥360px                                                 |
