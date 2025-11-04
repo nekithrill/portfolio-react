@@ -1,30 +1,42 @@
 .contacts {
 	width: 100%;
+	height: 100%;
 
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	gap: 2rem;
 
 	position: relative;
 
 	&__text {
-		flex: 1 1 55%;
+		width: 70%;
 	}
-	&__form {
-		flex: 1 1 40%;
-	}
+
 	&__socials {
 		flex: 1;
-
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
 
-		.item {
+		.item a {
+			color: var(--clr-button-text);
+
+			svg {
+				transition:
+					background-color 0.2s ease,
+					color 0.2s ease;
+				background-color: var(--clr-button-bg);
+			}
+
 			&:hover,
 			&:focus-visible {
-				color: green;
+				color: var(--clr-button-text-hover);
+				svg {
+					background-color: var(--clr-button-bg-hover);
+				}
 			}
 		}
 	}
