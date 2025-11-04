@@ -1,5 +1,5 @@
+import { useLanguage } from '@/app/providers/language/LanguageProvider'
 import { Switch } from '@/shared/components/ui/switch/Switch'
-import { useLanguage } from '@/shared/providers/language/LanguageProvider'
 import { LANGUAGES } from '@/shared/types/locale'
 
 export const LanguageSwitch = () => {

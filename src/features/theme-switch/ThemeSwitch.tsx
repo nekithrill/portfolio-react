@@ -1,9 +1,9 @@
+import { useTheme } from '@/app/providers/theme/ThemeProvider'
 import { IconWrapper } from '@/shared/components/icons/icon-wrapper/IconWrapper'
 import { MoonIcon } from '@/shared/components/icons/MoonIcon'
 import { SunIcon } from '@/shared/components/icons/SunIcon'
 import { SystemIcon } from '@/shared/components/icons/SystemIcon'
 import { Switch } from '@/shared/components/ui/switch/Switch'
-import { useTheme } from '@/shared/providers/theme/ThemeProvider'
 import styles from './ThemeSwitch.module.scss'
 
 export const ThemeSwitch = () => {
