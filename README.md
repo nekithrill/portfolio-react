@@ -124,7 +124,6 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 ├── ⚙️ .prettierrc
 ├── ⚙️ .stylelintrc.cjs
 ├── ⚙️ .eslintrc.cjs
-├── ⚙️ global.d.ts
 ├── ⚙️ tsconfig.json
 ├── ⚙️ tsconfig.node.json
 ├── ⚙️ vite.config.ts
