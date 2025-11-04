@@ -6,7 +6,6 @@ export interface IconWrapperProps {
 	height: number
 	className?: string
 	color?: string
-	bgc?: string
 }
 
 export type IconProps = {

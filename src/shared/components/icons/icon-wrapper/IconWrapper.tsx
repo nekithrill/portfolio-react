@@ -5,13 +5,12 @@ export function IconWrapper({
 	children,
 	width = 24,
 	height = 24,
-	color = 'currentColor',
-	bgc = ''
+	color = 'currentColor'
 }: IconWrapperProps) {
 	return (
 		<div
 			className={styles['icon-wrapper']}
-			style={{ width: width, height: height, color, backgroundColor: bgc }}
+			style={{ width: width, height: height, color }}
 		>
 			{children}
 		</div>
