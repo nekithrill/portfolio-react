@@ -1,20 +1,25 @@
+import { MainLayout } from '@/app/layouts/MainLayout'
 import { AboutPage } from '@/app/pages/about/AboutPage'
 import { ContactsPage } from '@/app/pages/contacts/ContactsPage'
 import { HomePage } from '@/app/pages/home/HomePage'
 import { PrivacyPage } from '@/app/pages/privacy/PrivacyPage'
 import { ProjectsPage } from '@/app/pages/projects/ProjectsPage'
 import { SkillsPage } from '@/app/pages/skills/SkillsPage'
+import { RootProvider } from '@/app/providers/RootProvider'
 import '@/app/styles/globals.scss'
-import { MainLayout } from '@/shared/components/layout/MainLayout'
 import { Background } from '@/shared/components/ui/background/Background'
 import '@/shared/config/i18n/config'
-import { RootProvider } from '@/shared/providers/RootProvider'
 import { Route, Routes } from 'react-router-dom'
 
 export default function App() {
 	return (
 		<>
-			<Background cellSize={62} lineColor='var(--clr-grid-line)' speed={1.5} />
+			<Background
+				lineColor='var(--clr-grid-line)'
+				lineWidth={2}
+				cellSize={192}
+				speed={2.5}
+			/>
 
 			<RootProvider>
 				<Routes>
