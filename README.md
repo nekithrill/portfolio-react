@@ -57,17 +57,13 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 ## **🧰 Supported devices and browsers**
 
-| Type | Name    | Support | Version | OS                    | Screen Size |
-| :--: | ------- | :-----: | ------- | --------------------- | ----------- |
-|  🌐  | Chrome  |   ❌    | 00+     | —                     | —           |
-|  🌐  | Firefox |   ❌    | 00+     | —                     | —           |
-|  🌐  | Safari  |   ❌    | 00+     | —                     | —           |
-|  🌐  | Edge    |   ❌    | 00+     | —                     | —           |
-|  🌐  | Opera   |   ❌    | 00+     | —                     | —           |
-|  🌐  | IE      |   ❌    | 00+     | —                     | —           |
-|  💻  | Desktop |   ❌    | —       | Windows, macOS, Linux | ≥1024px     |
-|  📟  | Tablet  |   ❌    | —       | iPadOS, Android       | ≥768px      |
-|  📱  | Phone   |   ❌    | —       | iOS, Android          | ≥360px      |
+| Type               | Support | Notes                                                  |
+| ------------------ | :-----: | ------------------------------------------------------ |
+| 🌐 Modern browsers |   ✅    | Chrome, Firefox, Safari, Edge, Opera (last 2 versions) |
+| 🌐 IE              |   ❌    | не поддерживается                                      |
+| 💻 Desktop         |   ✅    | ≥1024px                                                |
+| 📟 Tablet          |   ✅    | ≥768px                                                 |
+| 📱 Phone           |   ✅    | ≥360px                                                 |
 
 <br>
 
@@ -75,40 +71,45 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 The project was implemented using an adapted **FSD architecture**: the key principles of layering (app, features, shared, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
 
-📁 `app`: pages, global styles.
+📁 `app`: pages, providers, layouts, global styles.
 
 📁 `widgets`: blocks that builds from features/shared and used at app level.
 
 📁 `features`: modules with business logic.
 
-📁 `shared`: reusable stuff (ui, layouts, icons, hooks, assets).
+📁 `shared`: reusable stuff (ui elements, icons, configs, hooks, assets).
 
 <pre lang="md">📦 root
-├── 📁 dictionaries
-│    ├── 📄 en.json
-│    ├── 📄 ua.json
-│    └── 📄 ru.json
-│
 ├── 📁 src  
 │    ├── 📁 app
 │    │    ├── 📁 pages
+│    │    ├── 📁 providers
+│    │    ├── 📁 layouts
 │    │    ├── 📁 styles
 │    │    ├── 📄 App.tsx
 │    │    └── 📄 main.tsx
 │    │
 │    ├── 📁 features
-│    │    ├── 📁 contact-form
 │    │    ├── 📁 file-container
-│    │    ├── 📁 clock
 │    │    ├── 📁 language-switch
-│    │    └── 📁 theme-switch
+│    │    ├── 📁 theme-switch
+│    │    └── 📁 clock
 │    │
 │    ├── 📁 shared
 │    │    ├── 📁 assets
 │    │    ├── 📁 components
-│    │    ├── 📁 config
+│    │    │   ├── 📁 ui
+│    │    │   └── 📁 icons
+│    │    │
+│    │    ├── 📁 configs
+│    │    │   └── 📁 i18n
+│    │    │        ├── 📁 locales
+│    │    │        │    ├── 📄 en.json
+│    │    │        │    ├── 📄 ua.json
+│    │    │        │    └── 📄 ru.json
+│    │    │        └── 📄 config.ts
+│    │    │
 │    │    ├── 📁 hooks
-│    │    ├── 📁 providers
 │    │    └── 📁 types
 │    │    
 │    └── 📁 widgets
