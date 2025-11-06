@@ -28,13 +28,11 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"preview": "vite preview",
-		"check": "npm run check:lint && npm run check:style && npm run check:format",
-		"check:lint": "eslint 'src/**/*.{ts,tsx,js,jsx}'",
-		"check:style": "stylelint 'src/**/*.{css,scss}'",
+		"check:lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+		"check:style": "stylelint \"src/**/*.{css,scss}\"",
 		"check:format": "prettier --check .",
-		"fix": "npm run fix:lint && npm run fix:style && npm run fix:format",
-		"fix:lint": "eslint 'src/**/*.{ts,tsx,js,jsx}' --fix",
-		"fix:style": "stylelint 'src/**/*.{css,scss}' --fix",
+		"fix:lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+		"fix:style": "stylelint \"src/**/*.{css,scss}\" --fix",
 		"fix:format": "prettier --write ."
 	},
 	"dependencies": {
