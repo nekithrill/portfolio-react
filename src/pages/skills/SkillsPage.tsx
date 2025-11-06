@@ -14,6 +14,7 @@ export function SkillsPage() {
 				useH1={true}
 				title='section.skills.hard.title'
 				className={styles['skills__hard']}
+				contentClassName={styles['skills__hard-content']}
 				footerInfo={
 					<>
 						<p>{t('section.skills.hard.level.note')}</p>
@@ -38,7 +39,12 @@ export function SkillsPage() {
 							<h2>{t(heading)}</h2>
 							<div className={styles['inner__chips']}>
 								{items.map(({ name, level }) => (
-									<Chip key={name} name={name} level={level as 1 | 2 | 3} />
+									<Chip
+										key={name}
+										name={name}
+										level={level as 1 | 2 | 3}
+										showMarker={!!level}
+									/>
 								))}
 							</div>
 						</div>

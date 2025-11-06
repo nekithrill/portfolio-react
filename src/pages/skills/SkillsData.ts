@@ -31,9 +31,12 @@ export const skillsData = {
 			heading: 'section.skills.hard.other',
 			items: [
 				{ name: 'Vite', level: 2 },
-				{ name: 'Webpack', level: 2 },
 				{ name: 'Git', level: 2 },
-				{ name: 'Docker', level: 1 }
+				{ name: 'Docker', level: 1 },
+				{ name: 'ESlint' },
+				{ name: 'Prettier' },
+				{ name: 'Stylelint' },
+				{ name: 'Biomejs' }
 			]
 		}
 	],
@@ -46,20 +49,20 @@ export const skillsData = {
 		'section.skills.soft.enthusiasm'
 	],
 
-	principles: ['SOLID', 'DRY', 'KISS', 'YAGNI'],
+	principles: ['SOLID', 'YAGNI', 'KISS', 'DRY'],
 
 	languages: [
-		{
-			key: 'section.skills.languages.english',
-			level: 'B1'
-		},
 		{
 			key: 'section.skills.languages.ukrainian',
 			level: 'section.skills.languages.native'
 		},
 		{
 			key: 'section.skills.languages.russian',
-			level: 'section.skills.languages.native'
+			level: 'section.skills.languages.fluent'
+		},
+		{
+			key: 'section.skills.languages.english',
+			level: 'B1'
 		}
 	]
 }
