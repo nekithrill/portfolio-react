@@ -22,7 +22,7 @@ export default [
 	},
 	js.configs.recommended,
 	{
-		files: ['src/**/*.{ts,tsx}', 'global.d.ts'],
+		files: ['src/**/*.{ts,tsx,js,jsx}'],
 		languageOptions: {
 			parser: tsParser,
 			parserOptions: { project: './tsconfig.json' },
