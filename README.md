@@ -36,19 +36,17 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 <br>
 
-| Script         | Command                                                             | Purpose                                                  |
-| -------------- | ------------------------------------------------------------------- | -------------------------------------------------------- |
-| `dev`          | `vite`                                                              | Runs project in development mode.                        |
-| `build`        | `tsc -b && vite build`                                              | Builds **TypeScript** and bundles project with **Vite**. |
-| `preview`      | `vite preview`                                                      | Local preview of production build.                       |
-| `check`        | `npm run check:lint && npm run check:style && npm run check:format` | Runs all checks: ESLint, Stylelint, and Prettier.        |
-| `check:lint`   | `eslint 'src/**/*.{ts,tsx,js,jsx}'`                                 | Checks JS/TS files with **ESLint**.                      |
-| `check:style`  | `stylelint 'src/**/*.{css,scss}'`                                   | Checks CSS/SCSS files with **Stylelint**.                |
-| `check:format` | `prettier --check .`                                                | Checks code formatting with **Prettier**.                |
-| `fix`          | `npm run fix:lint && npm run fix:style && npm run fix:format`       | Runs autofix for ESLint, Stylelint, and Prettier.        |
-| `fix:lint`     | `eslint 'src/**/*.{ts,tsx,js,jsx}' --fix`                           | Autofix **ESLint** errors.                               |
-| `fix:style`    | `stylelint 'src/**/*.{css,scss}' --fix`                             | Autofix **Stylelint** errors.                            |
-| `fix:format`   | `prettier --write .`                                                | Formats code according to **Prettier** rules.            |
+| Script         | Command                                    | Purpose                                                  |
+| -------------- | ------------------------------------------ | -------------------------------------------------------- |
+| `dev`          | `vite`                                     | Runs project in development mode.                        |
+| `build`        | `tsc -b && vite build`                     | Builds **TypeScript** and bundles project with **Vite**. |
+| `preview`      | `vite preview`                             | Local preview of production build.                       |
+| `check:lint`   | `eslint src --ext .ts,.tsx,.js,.jsx`       | Checks JS/TS files with **ESLint**.                      |
+| `check:style`  | `stylelint \"src/**/*.{css,scss}\"`        | Checks CSS/SCSS files with **Stylelint**.                |
+| `check:format` | `prettier --check .`                       | Checks code formatting with **Prettier**.                |
+| `fix:lint`     | `eslint src --ext .ts,.tsx,.js,.jsx --fix` | Autofix **ESLint** errors.                               |
+| `fix:style`    | `stylelint \"src/**/*.{css,scss}\" --fix`  | Autofix **Stylelint** errors.                            |
+| `fix:format`   | `prettier --write .`                       | Formats code according to **Prettier** rules.            |
 |                |
 
 </details>
@@ -71,9 +69,11 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 
 The project was implemented using an adapted **FSD architecture**: the key principles of layering (app, features, shared, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
 
-📁 `app`: pages, providers, layouts, global styles.
+📁 `app`: providers, layouts, global styles.
 
-📁 `widgets`: blocks that builds from features/shared and used at app level.
+📁 `pages`: pages that builds from widgets and used at app level.
+
+📁 `widgets`: blocks that builds from features/shared and used at pages level.
 
 📁 `features`: modules with business logic.
 
@@ -88,6 +88,14 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 │    │    ├── 📁 styles
 │    │    ├── 📄 App.tsx
 │    │    └── 📄 main.tsx
+│    │
+│    ├── 📁 pages
+│    │    ├── 📁 about
+│    │    ├── 📁 contacts
+│    │    ├── 📁 home
+│    │    ├── 📁 project
+│    │    ├── 📁 skills
+│    │    └── 📁 privacy
 │    │
 │    ├── 📁 features
 │    │    ├── 📁 file-container
