@@ -2,6 +2,11 @@ module.exports = {
 	extends: ['stylelint-config-standard-scss'],
 	plugins: ['stylelint-scss'],
 	rules: {
+		// Overrides
+		'at-rule-no-unknown': null,
+		'custom-property-empty-line-before': null,
+		'declaration-empty-line-before': null,
+
 		// Colors & alpha
 		'color-hex-length': 'long',
 		'color-function-notation': 'modern',
@@ -35,11 +40,6 @@ module.exports = {
 		'scss/dollar-variable-pattern': '^[_a-z]+$',
 		'scss/no-duplicate-dollar-variables': true,
 		'scss/no-global-function-names': true,
-		'scss/selector-no-redundant-nesting-selector': true,
-
-		// Overrides
-		'at-rule-no-unknown': null,
-		'custom-property-empty-line-before': null,
-		'declaration-empty-line-before': null
+		'scss/selector-no-redundant-nesting-selector': true
 	}
 }
