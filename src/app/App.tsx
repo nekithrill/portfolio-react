@@ -1,6 +1,6 @@
 import { MainLayout } from '@/app/layouts/MainLayout'
 import { RootProvider } from '@/app/providers/RootProvider'
-import '@/app/styles/globals.scss'
+import '@/app/styles/main.scss'
 import { AboutPage } from '@/pages/about/AboutPage'
 import { ContactsPage } from '@/pages/contacts/ContactsPage'
 import { HomePage } from '@/pages/home/HomePage'
