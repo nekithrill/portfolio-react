@@ -149,10 +149,10 @@ The project uses **SCSS modules** for component-level styling, combined with a s
 This approach keeps styles modular and scoped by default while maintaining a clear global structure for shared variables, mixins, and themes.
 Component-specific styles are implemented as **\*.module.scss** files located alongside their components.
 
-- 📁 `abstracts`: Global variables, mixins, and utility functions.
-- 📁 `base`: Resets, typography, and global element styles.
-- 📁 `themes`: Theme definitions.
-- 📄 `main`: Entry point.
+- 📁 `abstracts`: global variables, mixins, and utility functions.
+- 📁 `base`: resets, typography, and global element styles.
+- 📁 `themes`: theme definitions.
+- 📄 `main`: entry point.
 
 <pre lang="md">📦 /app/styles
 ├── 📁 abstracts
