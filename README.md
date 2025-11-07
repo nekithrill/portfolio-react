@@ -8,16 +8,15 @@
 [![Stylelint](https://img.shields.io/badge/Stylelint-2e2e2e?style=for-the-badge&logo=stylelint)](https://stylelint.io/)
 [![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=000000)](https://prettier.io/)
 
-Portfolio is implemented as SPA using React and Vite. The application is written in TypeScript, styled using SCSS modules, includes animations and interactive components. The project uses ESLint, Stylelint and Prettier to keep the code clean.
+## **🧩 Overview**
 
-## **🧩 Dependencies and scripts**
+A React + TypeScript SPA built with Vite. Styled via SCSS modules and enhanced with animations and interactive components. Code quality ensured by ESLint, Stylelint, and Prettier.
 
 <details>
 <summary><strong>📚 Dependencies</strong></summary>
-
 <br>
 
-| Package(s)                              | Purpose                     |
+| Package                                 | Purpose                     |
 | --------------------------------------- | --------------------------- |
 | **React**, **ReactDOM**                 | UI                          |
 | **react-router-dom**                    | Routing                     |
@@ -28,12 +27,25 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 | **ESLint**, **Prettier**, **Stylelint** | Code quality and formatting |
 
 <br>
+</details>
 
+<details>
+<summary><strong>🧰 Compatibility</strong></summary>
+<br>
+
+| Type               | Support | Notes                                                  |
+| ------------------ | :-----: | ------------------------------------------------------ |
+| 🌐 Modern browsers |   ✅    | Chrome, Firefox, Safari, Edge, Opera (last 2 versions) |
+| 🌐 IE              |   ❌    | not supported                                          |
+| 💻 Desktop         |   ✅    | ≥1024px                                                |
+| 📟 Tablet          |   ✅    | ≥768px                                                 |
+| 📱 Phone           |   ✅    | ≥360px                                                 |
+
+<br>
 </details>
 
 <details>
 <summary><strong>📜 Scripts</strong></summary>
-
 <br>
 
 | Script         | Command                                    | Purpose                                                  |
@@ -49,40 +61,28 @@ Portfolio is implemented as SPA using React and Vite. The application is written
 | `fix:format`   | `prettier --write .`                       | Formats code according to **Prettier** rules.            |
 |                |
 
+<br>
 </details>
 
+## **🏗️ Project structure**
+
+<details>
+<summary><strong>🧱 Folders architecture</strong></summary>
 <br>
 
-## **🧰 Supported devices and browsers**
+The project follows an **adapted FSD (Feature-Sliced Design)** approach.  
+It keeps the core layering principles (_app → pages → widgets → features → shared_),  
+but with simplified module separation to match the app’s scope and personal preferences (w/o deep splitting).
 
-| Type               | Support | Notes                                                  |
-| ------------------ | :-----: | ------------------------------------------------------ |
-| 🌐 Modern browsers |   ✅    | Chrome, Firefox, Safari, Edge, Opera (last 2 versions) |
-| 🌐 IE              |   ❌    | not supported                                          |
-| 💻 Desktop         |   ✅    | ≥1024px                                                |
-| 📟 Tablet          |   ✅    | ≥768px                                                 |
-| 📱 Phone           |   ✅    | ≥360px                                                 |
-
-<br>
-
-## **🗂️ Project structure**
-
-The project was implemented using an adapted **FSD architecture**: the key principles of layering (app, features, shared, widgets) were preserved, but the structure was simplified to suit the specifics of the application and personal preferences (im not using deep module splitting (ui, api, model, etc)).
-
-📁 `app`: providers, layouts, global styles.
-
-📁 `pages`: pages that builds from widgets and used at app level.
-
-📁 `widgets`: blocks that builds from features/shared and used at pages level.
-
-📁 `features`: modules with business logic.
-
-📁 `shared`: reusable stuff (ui elements, icons, configs, hooks, assets).
+- 📁 `app`: providers, layouts, global styles.
+- 📁 `pages`: pages that builds from widgets and used at app level.
+- 📁 `widgets`: blocks that builds from features/shared and used at pages level.
+- 📁 `features`: modules with business logic.
+- 📁 `shared`: reusable stuff (ui elements, icons, configs, hooks, assets).
 
 <pre lang="md">📦 root
 ├── 📁 src  
 │    ├── 📁 app
-│    │    ├── 📁 pages
 │    │    ├── 📁 providers
 │    │    ├── 📁 layouts
 │    │    ├── 📁 styles
@@ -90,11 +90,11 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 │    │    └── 📄 main.tsx
 │    │
 │    ├── 📁 pages
-│    │    ├── 📁 about
-│    │    ├── 📁 contacts
 │    │    ├── 📁 home
+│    │    ├── 📁 about
 │    │    ├── 📁 project
 │    │    ├── 📁 skills
+│    │    ├── 📁 contacts
 │    │    └── 📁 privacy
 │    │
 │    ├── 📁 features
@@ -138,3 +138,40 @@ The project was implemented using an adapted **FSD architecture**: the key princ
 ├── ⚙️ vite-env.d.ts
 └── ⚙️ package.json
 </pre>
+<br>
+</details>
+
+<details>
+<summary><strong>🎨 Styling architecture</strong></summary>
+<br>
+
+The project uses **SCSS modules** for component-level styling, combined with a simplified **7–1 architecture** for global styles.
+This approach keeps styles modular and scoped by default while maintaining a clear global structure for shared variables, mixins, and themes.
+Component-specific styles are implemented as **\*.module.scss** files located alongside their components.
+
+- 📁 `abstracts`: Global variables, mixins, and utility functions.
+- 📁 `base`: Resets, typography, and global element styles.
+- 📁 `themes`: Theme definitions.
+- 📄 `main`: Entry point.
+
+<pre lang="md">📦 /app/styles
+├── 📁 abstracts
+│    ├── 📄 _breakpoints.scss
+│    ├── 📄 _animations.scss
+│    └── 📄 _index.scss
+│
+├── 📁 base
+│    ├── 📄 _reset.scss
+│    ├── 📄 _base.scss
+│    ├── 📄 _typography.scss
+│    └── 📄 _index.scss
+│
+├── 📁 themes
+│    ├── 📄 _light.scss
+│    ├── 📄 _dark.scss
+│    └── 📄 _index.scss
+│
+└── 📄 main.scss
+</pre>
+</details>
+<br>
