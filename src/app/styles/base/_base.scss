@@ -15,7 +15,6 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: 1rem;
 	text-transform: uppercase;
 	font-weight: var(--fw-bold);
 	font-family: var(--ff-accent);
@@ -80,10 +79,10 @@ a {
 }
 
 // Selection
-::selection {
-	background-color: var(--clr-selection-bg);
-	color: var(--clr-selection-text);
-}
+// ::selection {
+// 	background-color: var(--clr-selection-bg);
+// 	color: var(--clr-selection-text);
+// }
 
 // Keyboard focus
 *:focus-visible,

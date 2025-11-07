@@ -1,5 +1,3 @@
-@use 'sass:map';
-
 $breakpoints: (
 	'xxs': 0,
 	'xs': 360px,
@@ -12,20 +10,25 @@ $breakpoints: (
 
 /// Desktop-first media query mixin
 /// @param $size - breakpoint key
-/// @param $custom-size - unnecessary custom size
 /// @param $min-width - true -> mobile-first
+///
+/// Usage:
+/// @include breakpoint('md') { ... }           // max-width: 768px
+/// @include breakpoint('md', true) { ... }     // min-width: 768px
 
-@mixin breakpoint($size, $custom-size: null, $min-width: false) {
-	$width: if($custom-size, $custom-size, map.get($breakpoints, $size));
+@mixin breakpoint($size, $min-width: false) {
+	$query: map.get($breakpoints, $size);
 
-	@if not $width {
-		@warn "Breakpoint `#{$size}` not found in list $breakpoints, and custom value not passed.";
-	} @else if $min-width {
-		@media (min-width: $width) {
+	@if not $query {
+		@error "⚠️ Breakpoint `#{$size}` not found in $breakpoints map.";
+	}
+
+	@if $min-width {
+		@media (min-width: $query) {
 			@content;
 		}
 	} @else {
-		@media (max-width: $width) {
+		@media (max-width: $query) {
 			@content;
 		}
 	}
